@@ -30,3 +30,5 @@ Route::post('/work/mockup3', 'ImageController@uploadMockup3');
 
 Route::post('/work/mockup4', 'ImageController@uploadMockup4');
 
+Route::post('/work/mockup5', 'ImageController@uploadMockup5');
+
