@@ -81,3 +81,21 @@ Route::post('/work/mockup28', 'ImageController@uploadMockup28');
 Route::post('/work/mockup29', 'ImageController@uploadMockup29');
 
 Route::post('/work/mockup30', 'ImageController@uploadMockup30');
+
+Route::post('/work/mockup31', 'ImageController@uploadMockup31');
+
+Route::post('/work/mockup32', 'ImageController@uploadMockup32');
+
+Route::post('/work/mockup33', 'ImageController@uploadMockup33');
+
+Route::post('/work/mockup34', 'ImageController@uploadMockup34');
+
+Route::post('/work/mockup35', 'ImageController@uploadMockup35');
+
+Route::post('/work/mockup36', 'ImageController@uploadMockup36');
+
+Route::post('/work/mockup37', 'ImageController@uploadMockup37');
+
+Route::post('/work/mockup38', 'ImageController@uploadMockup38');
+
+Route::post('/work/mockup39', 'ImageController@uploadMockup39');

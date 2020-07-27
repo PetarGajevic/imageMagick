@@ -32,6 +32,8 @@
 
 </form>
 
+<h2>Zenske majice</h2>
+
 <form action="/work/mockup3" method="post" enctype="multipart/form-data">
     @csrf
     <label>Select image to upload:</label>
@@ -262,4 +264,86 @@
     <input type="submit" value="Upload" name="submit">
 
 </form>
+
+<form action="/work/mockup31" method="post" enctype="multipart/form-data">
+    @csrf
+    <label>Select image to upload:</label>
+    <input type="file" name="file" id="file">
+    <input type="submit" value="Upload" name="submit">
+
+</form>
+
+
+<form action="/work/mockup32" method="post" enctype="multipart/form-data">
+    @csrf
+    <label>Select image to upload:</label>
+    <input type="file" name="file" id="file">
+    <input type="submit" value="Upload" name="submit">
+
+</form>
+
+<form action="/work/mockup33" method="post" enctype="multipart/form-data">
+    @csrf
+    <label>Select image to upload:</label>
+    <input type="file" name="file" id="file">
+    <input type="submit" value="Upload" name="submit">
+
+</form>
+
+
+<h2>Maske</h2>
+
+<form action="/work/mockup34" method="post" enctype="multipart/form-data">
+    @csrf
+    <label>Select image to upload:</label>
+    <input type="file" name="file" id="file">
+    <input type="submit" value="Upload" name="submit">
+
+</form>
+
+
+<h2>Tapete</h2>
+
+<form action="/work/mockup35" method="post" enctype="multipart/form-data">
+    @csrf
+    <label>Select image to upload:</label>
+    <input type="file" name="file" id="file">
+    <input type="submit" value="Upload" name="submit">
+
+</form>
+
+<form action="/work/mockup36" method="post" enctype="multipart/form-data">
+    @csrf
+    <label>Select image to upload:</label>
+    <input type="file" name="file" id="file">
+    <input type="submit" value="Upload" name="submit">
+
+</form>
+
+<form action="/work/mockup37" method="post" enctype="multipart/form-data">
+    @csrf
+    <label>Select image to upload:</label>
+    <input type="file" name="file" id="file">
+    <input type="submit" value="Upload" name="submit">
+
+</form>
+
+<form action="/work/mockup38" method="post" enctype="multipart/form-data">
+    @csrf
+    <label>Select image to upload:</label>
+    <input type="file" name="file" id="file">
+    <input type="submit" value="Upload" name="submit">
+
+</form>
+
+<h2>Canvasi</h2>
+
+<form action="/work/mockup39" method="post" enctype="multipart/form-data">
+    @csrf
+    <label>Select image to upload:</label>
+    <input type="file" name="file" id="file">
+    <input type="submit" value="Upload" name="submit">
+
+</form>
+
 

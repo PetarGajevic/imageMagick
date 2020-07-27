@@ -20,39 +20,5 @@
   </div>
       <!-- /.container-fluid -->
 </nav>
-<section id="pmd-main">
-  <!-- Left sidebar -->
-  <aside id="basicSidebar" class="pmd-sidebar sidebar-dark pmd-z-depth"
-  role="navigation">
-      <ul class="nav pmd-sidebar-nav">
-          <!-- My Account -->
-          <li class="dropdown pmd-dropdown pmd-user-info nav-item">
-             <a aria-expanded="false" data-toggle="dropdown" data-sidebar="true" class="btn-user dropdown-toggle media nav-link"
-              href="javascript:void(0);">
-              Clothing
-            
-                  </a>
-              <ul class="dropdown-menu">
-                  <li class="dropdown-item"> <a class="pmd-ripple-effect" href="javascript:void(0);" tabindex="-1">
-                 T-shirt
-                  </li>
-                  <li class="dropdown-item"> 
-                      <a class="pmd-ripple-effect" href="javascript:void(0);" tabindex="-1">
-                          
-                  </li>
-                  <li class="dropdown-item"> <a class="pmd-ripple-effect" href="javascript:void(0);" tabindex="-1"><i class="material-icons media-left media-middle">history</i> <span class="media-body">Logout</span></a>
-                  </li>
-              </ul>
-          </li>
-          <li class="nav-item"> <a class="pmd-ripple-effect nav-link" href="javascript:void(0);"><i class="material-icons media-left media-middle">delete</i> <span class="media-body">Trash</span></a> 
-          </li>
-          <li class="nav-item"> <a class="pmd-ripple-effect nav-link" href="javascript:void(0);"><i class="material-icons media-left media-middle">notifications</i> <span class="media-body">Spam</span></a> 
-          </li>
-          <li class="nav-item"> <a class="pmd-ripple-effect nav-link" href="javascript:void(0);"><i class="material-icons media-left media-middle">notifications</i> <span class="media-body">Follow Up</span></a> 
-          </li>
-      </ul>
-  </aside>
- 
-  <div class="pmd-sidebar-overlay"></div>
-</section>
+
   
