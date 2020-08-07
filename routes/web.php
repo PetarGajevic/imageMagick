@@ -99,3 +99,43 @@ Route::post('/work/mockup37', 'ImageController@uploadMockup37');
 Route::post('/work/mockup38', 'ImageController@uploadMockup38');
 
 Route::post('/work/mockup39', 'ImageController@uploadMockup39');
+
+Route::post('/work/mockup40', 'ImageController@uploadMockup40');
+
+Route::post('/work/mockup41', 'ImageController@uploadMockup41');
+
+Route::post('/work/mockup42', 'ImageController@uploadMockup42');
+
+Route::post('/work/mockup43', 'ImageController@uploadMockup43');
+
+Route::post('/work/mockup44', 'ImageController@uploadMockup44');
+
+Route::post('/work/mockup45', 'ImageController@uploadMockup45');
+
+Route::post('/work/mockup46', 'ImageController@uploadMockup46');
+
+Route::post('/work/mockup47', 'ImageController@uploadMockup47');
+
+Route::post('/work/mockup48', 'ImageController@uploadMockup48');
+
+Route::post('/work/mockup49', 'ImageController@uploadMockup49');
+
+Route::post('/work/mockup50', 'ImageController@uploadMockup50');
+
+Route::post('/work/mockup51', 'ImageController@uploadMockup51');
+
+Route::post('/work/mockup52', 'ImageController@uploadMockup52');
+
+Route::post('/work/mockup53', 'ImageController@uploadMockup53');
+
+Route::post('/work/mockup54', 'ImageController@uploadMockup54');
+
+Route::post('/work/mockup55', 'ImageController@uploadMockup55');
+
+Route::post('/work/mockup56', 'ImageController@uploadMockup56');
+
+Route::post('/work/mockup57', 'ImageController@uploadMockup57');
+
+Route::post('/work/mockup58', 'ImageController@uploadMockup58');
+
+Route::post('/work/mockup59', 'ImageController@uploadMockup59');
