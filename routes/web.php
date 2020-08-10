@@ -139,3 +139,7 @@ Route::post('/work/mockup57', 'ImageController@uploadMockup57');
 Route::post('/work/mockup58', 'ImageController@uploadMockup58');
 
 Route::post('/work/mockup59', 'ImageController@uploadMockup59');
+
+Route::post('/work/mockup60', 'ImageController@uploadMockup60');
+
+Route::post('/work/mockup61', 'ImageController@uploadMockup61');

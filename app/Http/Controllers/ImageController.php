@@ -112,8 +112,8 @@ echo $tshirt->getImageBlob();
        dd(); */
 
  $src1 = new \Imagick(public_path("design". $imageName1));
- $src1->resizeImage(500, null,\Imagick::FILTER_LANCZOS,1); 
- $src1->writeImage(public_path("design". $imageName1));
+/*  $src1->resizeImage(500, null,\Imagick::FILTER_LANCZOS,1); 
+ $src1->writeImage(public_path("design". $imageName1)); */
 $src2 = new \Imagick(public_path("\image\Iphone-II-Pro-Bezpozadine1.png"));
 $src3 = new \Imagick(public_path("\image\Iphone-II-Pro.jpg"));
 
@@ -155,7 +155,7 @@ if (!$process6->isSuccessful()) {
  $process7 = new Process('magick convert ^
  C:\xampp\htdocs\www\imageMagick\public\design'. $imageName1. ' ^
  C:\xampp\htdocs\www\imageMagick\public\image\ms_light_map-phone.png ^
- -geometry -250-150 ^
+ -geometry -270-150 ^
  -compose Multiply -composite ^
  C:\xampp\htdocs\www\imageMagick\public\image\ms_logo_displace_mask_phone.png ^
  -compose CopyOpacity -composite ^
@@ -172,7 +172,7 @@ echo '<img src="\image\ms_light_map_logo_phone.png">';
 $src1->setImageVirtualPixelMethod(\Imagick::VIRTUALPIXELMETHOD_TRANSPARENT);
 $src1->setImageArtifact('compose:args', "1,0,-0.5,0.5");
 $src = new \Imagick(public_path("\image\ms_light_map_logo_phone.png"));
-$src2->compositeImage($src, \Imagick::COMPOSITE_DSTOVER, 250, 150);
+$src2->compositeImage($src, \Imagick::COMPOSITE_DSTOVER, 270, 150);
 $src2->writeImage(public_path("image/output.png"));
 echo '<img src="data:image/jpg;base64,'.base64_encode($src2->getImageBlob()).'" alt="" />'; 
 /* $src1 = new \Imagick(public_path("\image\ms_light_map_logo_phone.png")); */
@@ -2746,38 +2746,12 @@ echo $tshirt->getImageBlob();
              $imageName1 = "/" .  $image; 
       
              $path = public_path();
-      /* 
-             $src1 = new \Imagick(public_path("design". $imageName1));
-             $src1->resizeImage(500, null,\Imagick::FILTER_LANCZOS,1); 
-             $src1->writeImage(public_path("design". $imageName1));
-            $src2 = new \Imagick(public_path("\image\Iphone-II-Pro-Bezpozadine1.png"));
-            $src3 = new \Imagick(public_path("\image\Iphone-II-Pro.jpg"));
-            
-            
-             $src1->setImageArtifact('compose:args', "1,0,-0.5,0.5"); 
-            
-             $process5 = new Process('magick convert ^
-             C:\xampp\htdocs\www\imageMagick\public\image\Iphone-II-Pro.jpg ^
-             -channel A -blur 0x8
-             -compose hardlight
-             C:\xampp\htdocs\www\imageMagick\public\image\ms_light_map-phone.png
-              ');
-      
-             dd(); */
-    
-            
-    
-           
-              /* Makao sam komandu -separate proces 5   -colorspace gray -auto-level ^
-             -blur 0x3 ^
-             -contrast-stretch 0,50%% ^
-             -depth 16 ^  -negate  -channel A -blur 0x8*/
-            
+
          
             
       
        $src1 = new \Imagick(public_path("design". $imageName1));
-       $src1->resizeImage(400, null,\Imagick::FILTER_LANCZOS,1); 
+       $src1->resizeImage(500, null,\Imagick::FILTER_LANCZOS,1); 
        $src1->writeImage(public_path("design". $imageName1));
       $src2 = new \Imagick(public_path("\image\Samsung-P20-Bezpozadine.png"));
       
@@ -2822,7 +2796,7 @@ echo $tshirt->getImageBlob();
        $process7 = new Process('magick convert ^
        '.$path.'\design'. $imageName1. ' ^
        '.$path.'\image\ms_light_map-phone1.png ^
-       -geometry -340-320 ^
+       -geometry -280-130 ^
        -compose Multiply -composite ^
        '.$path.'\image\ms_logo_displace_mask_phone1.png ^
        -compose CopyOpacity -composite ^
@@ -2839,7 +2813,7 @@ echo $tshirt->getImageBlob();
       $src1->setImageVirtualPixelMethod(\Imagick::VIRTUALPIXELMETHOD_TRANSPARENT);
       $src1->setImageArtifact('compose:args', "1,0,-0.5,0.5");
       $src = new \Imagick(public_path("\image\ms_light_map_logo_phone1.png"));
-      $src2->compositeImage($src, \Imagick::COMPOSITE_DSTOVER, 340, 320);
+      $src2->compositeImage($src, \Imagick::COMPOSITE_DSTOVER, 280, 130);
       $src2->writeImage(public_path("image/output1.png"));
        $process5 = new Process('magick  convert '.$path.'\image\output1.png 
        -flatten  '.$path.'\image\out.png 
@@ -2905,7 +2879,7 @@ echo $tshirt->getImageBlob();
         
   
    $src1 = new \Imagick(public_path("design". $imageName1));
-   $src1->resizeImage(400, null,\Imagick::FILTER_LANCZOS,1); 
+   $src1->resizeImage(550, null,\Imagick::FILTER_LANCZOS,1); 
    $src1->writeImage(public_path("design". $imageName1));
   $src2 = new \Imagick(public_path("\site-images\Samsung-S20Plus-Bezpozadine.png"));
   
@@ -2950,7 +2924,7 @@ echo $tshirt->getImageBlob();
    $process7 = new Process('magick convert ^
    '.$path.'\design'. $imageName1. ' ^
    '.$path.'\image\ms_light_map-phone1.png ^
-   -geometry -340-320 ^
+   -geometry -280-130 ^
    -compose Multiply -composite ^
    '.$path.'\image\ms_logo_displace_mask_phone1.png ^
    -compose CopyOpacity -composite ^
@@ -2967,7 +2941,7 @@ echo $tshirt->getImageBlob();
   $src1->setImageVirtualPixelMethod(\Imagick::VIRTUALPIXELMETHOD_TRANSPARENT);
   $src1->setImageArtifact('compose:args', "1,0,-0.5,0.5");
   $src = new \Imagick(public_path("\image\ms_light_map_logo_phone1.png"));
-  $src2->compositeImage($src, \Imagick::COMPOSITE_DSTOVER, 340, 320);
+  $src2->compositeImage($src, \Imagick::COMPOSITE_DSTOVER, 280, 130);
   $src2->writeImage(public_path("image/output1.png"));
    $process5 = new Process('magick  convert '.$path.'\image\output1.png 
    -flatten  '.$path.'\image\out.png 
@@ -4450,6 +4424,108 @@ if (!$process8->isSuccessful()) {
     $filename = pathinfo($imageName, PATHINFO_FILENAME);
     
     $extension =  $request->file('file')->getClientOriginalExtension();
+    $image = $filename . "_" . time() . ".".$extension;
+     $file->move('design/', $image); 
+
+     $imageName1 = "/" .  $image; 
+
+     $path = public_path();
+
+
+     $src1 = new \Imagick(public_path("design". $imageName1));
+     $src1->resizeImage(500, null,\Imagick::FILTER_LANCZOS,1); 
+     $src1->writeImage(public_path("design". $imageName1));
+     $src2 = new \Imagick(public_path("\site-images\Framed-Art-Black-A3-Mask.png"));
+    /*  $src2->resizeImage(1500, 1500,\Imagick::FILTER_LANCZOS,1); 
+     $src2->writeImage(public_path("\site-images\Canvas-mockup-thumbnail.png")); */
+     
+     $src1->setImageArtifact('compose:args', "1,0,-0.5,0.5"); 
+     
+     $process5 = new Process('magick convert ^
+     '.$path.'\site-images\Framed-Art-Black-A3-Mask.png ^
+     -channel A -blur 0x8
+     -compose hardlight
+     '.$path.'\image\ms_light_map-A3-black.png
+     ');
+     
+     /* Makao sam komandu -separate proces 5   -colorspace gray -auto-level ^
+     -blur 0x3 ^
+     -contrast-stretch 0,50%% ^
+     -depth 16 ^  -negate  -channel A -blur 0x8*/
+     
+     $process5->run();
+     if (!$process5->isSuccessful()) {
+     throw new ProcessFailedException($process5);
+     }
+     echo $process5->getOutput();
+     echo '<img src="\image\ms_light_map-A3-black.png">';
+     
+     $process6 = new Process('magick convert ^
+     '.$path.'\design'. $imageName1. ' ^
+     -channel matte -separate ^
+     '.$path.'\image\ms_logo_displace_mask_A3-black.png
+     ');
+     
+     
+     
+     $process6->run();
+     if (!$process6->isSuccessful()) {
+     throw new ProcessFailedException($process6);
+     }
+     echo $process6->getOutput();
+     echo '<img src="\image\ms_logo_displace_mask_A3-black.png">';
+     
+     $process7 = new Process('magick convert ^
+     '.$path.'\design'. $imageName1. ' ^
+     '.$path.'\image\ms_light_map-A3-black.png ^
+     -geometry -300-250 ^
+     -compose Multiply -composite ^
+     '.$path.'\image\ms_logo_displace_mask_A3-black.png ^
+     -compose CopyOpacity -composite ^
+     '.$path.'\image\ms_light_map_logo_A3-black.png
+     ');
+     
+     $process7->run();
+     if (!$process7->isSuccessful()) {
+     throw new ProcessFailedException($process7);
+     }
+     echo $process7->getOutput();
+     echo '<img src="\image\ms_light_map_logo_A3-black.png">';
+
+
+     $src2->compositeImage($src1, \Imagick::COMPOSITE_DSTOVER ,300,250);
+     $src2->writeImage(public_path("image\image-A3-black.png"));
+     echo '<img src="\image\image-A3-black.png">';
+     $src4 = new \Imagick(public_path("site-images/Framed-Art-Black-A3-BG.png"));
+    /*  $src4->resizeImage(1500, 1500,\Imagick::FILTER_LANCZOS,1); 
+     $src4->writeImage(public_path("\site-images/Textura-Canvas-mockup.png")); */
+      $src3 = new \Imagick(public_path("image/image-A3-black.png"));
+      $src3->compositeImage($src4, \Imagick::COMPOSITE_MULTIPLY,0,0);
+      $src3->writeImage(public_path("image\multiply_A3-black.png"));
+
+    echo '<img src="\image\multiply_A3-black.png">'; 
+     dd();
+     $src1->setImageVirtualPixelMethod(\Imagick::VIRTUALPIXELMETHOD_TRANSPARENT);
+     $src1->setImageArtifact('compose:args', "1,0,-0.5,0.5");
+     $src = new \Imagick(public_path("\image\ms_light_map_logo_canvas.png"));
+     $src2->compositeImage($src, \Imagick::COMPOSITE_COLORIZE , 340, 620);
+     $src2->writeImage(public_path("image/output1.png"));
+     $process5 = new Process('magick  convert '.$path.'\image\output1.png 
+     -flatten  '.$path.'\image\out_canvas.png 
+     ');
+      $process5->run();
+         if (!$process5->isSuccessful()) {
+          throw new ProcessFailedException($process5);
+         }
+          echo $process5->getOutput();
+          echo '<img src="\image\out_canvas.png">'; 
+    dd();
+    $file = $request->file('file');
+    $imageName =  $file->getClientOriginalName();
+    $imageName = preg_replace('/\s+/', '', $imageName);
+    $filename = pathinfo($imageName, PATHINFO_FILENAME);
+    
+    $extension =  $request->file('file')->getClientOriginalExtension();
    // dd($extension);
     $image = $filename . "_" . time() . ".".$extension;
      $file->move('design/', $image); 
@@ -4529,6 +4605,109 @@ if (!$process8->isSuccessful()) {
 
 
   public function uploadMockup26(Request $request){
+
+    $file = $request->file('file');
+    $imageName =  $file->getClientOriginalName();
+    $imageName = preg_replace('/\s+/', '', $imageName);
+    $filename = pathinfo($imageName, PATHINFO_FILENAME);
+    
+    $extension =  $request->file('file')->getClientOriginalExtension();
+    $image = $filename . "_" . time() . ".".$extension;
+     $file->move('design/', $image); 
+
+     $imageName1 = "/" .  $image; 
+
+     $path = public_path();
+
+
+     $src1 = new \Imagick(public_path("design". $imageName1));
+     $src1->resizeImage(500, null,\Imagick::FILTER_LANCZOS,1); 
+     $src1->writeImage(public_path("design". $imageName1));
+     $src2 = new \Imagick(public_path("\site-images\Framed-Art-White-A3-Mask.png"));
+    /*  $src2->resizeImage(1500, 1500,\Imagick::FILTER_LANCZOS,1); 
+     $src2->writeImage(public_path("\site-images\Canvas-mockup-thumbnail.png")); */
+     
+     $src1->setImageArtifact('compose:args', "1,0,-0.5,0.5"); 
+     
+     $process5 = new Process('magick convert ^
+     '.$path.'\site-images\Framed-Art-White-A3-Mask.png ^
+     -channel A -blur 0x8
+     -compose hardlight
+     '.$path.'\image\ms_light_map-A3-white.png
+     ');
+     
+     /* Makao sam komandu -separate proces 5   -colorspace gray -auto-level ^
+     -blur 0x3 ^
+     -contrast-stretch 0,50%% ^
+     -depth 16 ^  -negate  -channel A -blur 0x8*/
+     
+     $process5->run();
+     if (!$process5->isSuccessful()) {
+     throw new ProcessFailedException($process5);
+     }
+     echo $process5->getOutput();
+     echo '<img src="\image\ms_light_map-A3-white.png">';
+     
+     $process6 = new Process('magick convert ^
+     '.$path.'\design'. $imageName1. ' ^
+     -channel matte -separate ^
+     '.$path.'\image\ms_logo_displace_mask_A3-white.png
+     ');
+     
+     
+     
+     $process6->run();
+     if (!$process6->isSuccessful()) {
+     throw new ProcessFailedException($process6);
+     }
+     echo $process6->getOutput();
+     echo '<img src="\image\ms_logo_displace_mask_A3-white.png">';
+     
+     $process7 = new Process('magick convert ^
+     '.$path.'\design'. $imageName1. ' ^
+     '.$path.'\image\ms_light_map-A3-white.png ^
+     -geometry -360-340 ^
+     -compose Multiply -composite ^
+     '.$path.'\image\ms_logo_displace_mask_A3-white.png ^
+     -compose CopyOpacity -composite ^
+     '.$path.'\image\ms_light_map_logo_A3-white.png
+     ');
+     
+     $process7->run();
+     if (!$process7->isSuccessful()) {
+     throw new ProcessFailedException($process7);
+     }
+     echo $process7->getOutput();
+     echo '<img src="\image\ms_light_map_logo_A3-white.png">';
+
+
+     $src2->compositeImage($src1, \Imagick::COMPOSITE_DSTOVER ,360,340);
+     $src2->writeImage(public_path("image\image-A3-white.png"));
+     echo '<img src="\image\image-A3-white.png">';
+     $src4 = new \Imagick(public_path("site-images/Framed-Art-White-A3-BG.jpg"));
+    /*  $src4->resizeImage(1500, 1500,\Imagick::FILTER_LANCZOS,1); 
+     $src4->writeImage(public_path("\site-images/Textura-Canvas-mockup.png")); */
+      $src3 = new \Imagick(public_path("image/image-A3-white.png"));
+      $src3->compositeImage($src4, \Imagick::COMPOSITE_MULTIPLY,0,0);
+      $src3->writeImage(public_path("image\multiply_A3-white.png"));
+
+    echo '<img src="\image\multiply_A3-white.png">'; 
+     dd();
+     $src1->setImageVirtualPixelMethod(\Imagick::VIRTUALPIXELMETHOD_TRANSPARENT);
+     $src1->setImageArtifact('compose:args', "1,0,-0.5,0.5");
+     $src = new \Imagick(public_path("\image\ms_light_map_logo_canvas.png"));
+     $src2->compositeImage($src, \Imagick::COMPOSITE_COLORIZE , 340, 620);
+     $src2->writeImage(public_path("image/output1.png"));
+     $process5 = new Process('magick  convert '.$path.'\image\output1.png 
+     -flatten  '.$path.'\image\out_canvas.png 
+     ');
+      $process5->run();
+         if (!$process5->isSuccessful()) {
+          throw new ProcessFailedException($process5);
+         }
+          echo $process5->getOutput();
+          echo '<img src="\image\out_canvas.png">'; 
+    dd();
     $file = $request->file('file');
     $imageName =  $file->getClientOriginalName();
     $imageName = preg_replace('/\s+/', '', $imageName);
@@ -4619,6 +4798,93 @@ if (!$process8->isSuccessful()) {
     $filename = pathinfo($imageName, PATHINFO_FILENAME);
     
     $extension =  $request->file('file')->getClientOriginalExtension();
+    $image = $filename . "_" . time() . ".".$extension;
+     $file->move('design/', $image); 
+
+     $imageName1 = "/" .  $image; 
+
+     $path = public_path();
+
+
+     $src1 = new \Imagick(public_path("design". $imageName1));
+     $src1->resizeImage(500, null,\Imagick::FILTER_LANCZOS,1); 
+     $src1->writeImage(public_path("design". $imageName1));
+     $src2 = new \Imagick(public_path("\site-images\Thumbnail-Framed-Art-White-A4-Mask.png"));
+    /*  $src2->resizeImage(1500, 1500,\Imagick::FILTER_LANCZOS,1); 
+     $src2->writeImage(public_path("\site-images\Canvas-mockup-thumbnail.png")); */
+     
+     $src1->setImageArtifact('compose:args', "1,0,-0.5,0.5"); 
+     
+     $process5 = new Process('magick convert ^
+     '.$path.'\site-images\Thumbnail-Framed-Art-White-A4-Mask.png ^
+     -channel A -blur 0x8
+     -compose hardlight
+     '.$path.'\image\ms_light_map-thumb-white.png
+     ');
+     
+     /* Makao sam komandu -separate proces 5   -colorspace gray -auto-level ^
+     -blur 0x3 ^
+     -contrast-stretch 0,50%% ^
+     -depth 16 ^  -negate  -channel A -blur 0x8*/
+     
+     $process5->run();
+     if (!$process5->isSuccessful()) {
+     throw new ProcessFailedException($process5);
+     }
+     echo $process5->getOutput();
+     echo '<img src="\image\ms_light_map-thumb-white.png">';
+     
+     $process6 = new Process('magick convert ^
+     '.$path.'\design'. $imageName1. ' ^
+     -channel matte -separate ^
+     '.$path.'\image\ms_logo_displace_mask_thumb-white.png
+     ');
+     
+     
+     
+     $process6->run();
+     if (!$process6->isSuccessful()) {
+     throw new ProcessFailedException($process6);
+     }
+     echo $process6->getOutput();
+     echo '<img src="\image\ms_logo_displace_mask_thumb-white.png">';
+     
+     $process7 = new Process('magick convert ^
+     '.$path.'\design'. $imageName1. ' ^
+     '.$path.'\image\ms_light_map-thumb-white.png ^
+     -geometry -290-280 ^
+     -compose Multiply -composite ^
+     '.$path.'\image\ms_logo_displace_mask_thumb-white.png ^
+     -compose CopyOpacity -composite ^
+     '.$path.'\image\ms_light_map_logo_thumb-white.png
+     ');
+     
+     $process7->run();
+     if (!$process7->isSuccessful()) {
+     throw new ProcessFailedException($process7);
+     }
+     echo $process7->getOutput();
+     echo '<img src="\image\ms_light_map_logo_thumb-white.png">';
+
+
+     $src2->compositeImage($src1, \Imagick::COMPOSITE_DSTOVER ,290,280);
+     $src2->writeImage(public_path("image\image-thumb-white.png"));
+     echo '<img src="\image\image-thumb-white.png">';
+     $src4 = new \Imagick(public_path("site-images/Thumbnail-Framed-Art-White-A4-BG.png"));
+    /*  $src4->resizeImage(1500, 1500,\Imagick::FILTER_LANCZOS,1); 
+     $src4->writeImage(public_path("\site-images/Textura-Canvas-mockup.png")); */
+      $src3 = new \Imagick(public_path("image/image-thumb-white.png"));
+      $src3->compositeImage($src4, \Imagick::COMPOSITE_MULTIPLY,0,0);
+      $src3->writeImage(public_path("image\multiply_thumb-white.png"));
+
+    echo '<img src="\image\multiply_thumb-white.png">'; 
+    dd();
+    $file = $request->file('file');
+    $imageName =  $file->getClientOriginalName();
+    $imageName = preg_replace('/\s+/', '', $imageName);
+    $filename = pathinfo($imageName, PATHINFO_FILENAME);
+    
+    $extension =  $request->file('file')->getClientOriginalExtension();
    // dd($extension);
     $image = $filename . "_" . time() . ".".$extension;
      $file->move('design/', $image); 
@@ -4697,6 +4963,95 @@ if (!$process8->isSuccessful()) {
   }
 
   public function uploadMockup28(Request $request){
+
+    $file = $request->file('file');
+    $imageName =  $file->getClientOriginalName();
+    $imageName = preg_replace('/\s+/', '', $imageName);
+    $filename = pathinfo($imageName, PATHINFO_FILENAME);
+    
+    $extension =  $request->file('file')->getClientOriginalExtension();
+    $image = $filename . "_" . time() . ".".$extension;
+     $file->move('design/', $image); 
+
+     $imageName1 = "/" .  $image; 
+
+     $path = public_path();
+
+
+     $src1 = new \Imagick(public_path("design". $imageName1));
+     $src1->resizeImage(400, null,\Imagick::FILTER_LANCZOS,1); 
+     $src1->writeImage(public_path("design". $imageName1));
+     $src2 = new \Imagick(public_path("\site-images\Framed-Art-White-B1-Mask.png"));
+    /*  $src2->resizeImage(1500, 1500,\Imagick::FILTER_LANCZOS,1); 
+     $src2->writeImage(public_path("\site-images\Canvas-mockup-thumbnail.png")); */
+     
+     $src1->setImageArtifact('compose:args', "1,0,-0.5,0.5"); 
+     
+     $process5 = new Process('magick convert ^
+     '.$path.'\site-images\Framed-Art-White-B1-Mask.png ^
+     -channel A -blur 0x8
+     -compose hardlight
+     '.$path.'\image\ms_light_map-B1-white.png
+     ');
+     
+     /* Makao sam komandu -separate proces 5   -colorspace gray -auto-level ^
+     -blur 0x3 ^
+     -contrast-stretch 0,50%% ^
+     -depth 16 ^  -negate  -channel A -blur 0x8*/
+     
+     $process5->run();
+     if (!$process5->isSuccessful()) {
+     throw new ProcessFailedException($process5);
+     }
+     echo $process5->getOutput();
+     echo '<img src="\image\ms_light_map-B1-white.png">';
+     
+     $process6 = new Process('magick convert ^
+     '.$path.'\design'. $imageName1. ' ^
+     -channel matte -separate ^
+     '.$path.'\image\ms_logo_displace_mask_B1-white.png
+     ');
+     
+     
+     
+     $process6->run();
+     if (!$process6->isSuccessful()) {
+     throw new ProcessFailedException($process6);
+     }
+     echo $process6->getOutput();
+     echo '<img src="\image\ms_logo_displace_mask_B1-white.png">';
+     
+     $process7 = new Process('magick convert ^
+     '.$path.'\design'. $imageName1. ' ^
+     '.$path.'\image\ms_light_map-B1-white.png ^
+     -geometry -340-300 ^
+     -compose Multiply -composite ^
+     '.$path.'\image\ms_logo_displace_mask_B1-white.png ^
+     -compose CopyOpacity -composite ^
+     '.$path.'\image\ms_light_map_logo_B1-white.png
+     ');
+     
+     $process7->run();
+     if (!$process7->isSuccessful()) {
+     throw new ProcessFailedException($process7);
+     }
+     echo $process7->getOutput();
+     echo '<img src="\image\ms_light_map_logo_B1-white.png">';
+
+
+     $src2->compositeImage($src1, \Imagick::COMPOSITE_DSTOVER ,340,300);
+     $src2->writeImage(public_path("image\image-B1-white.png"));
+     echo '<img src="\image\image-B1-white.png">';
+     $src4 = new \Imagick(public_path("site-images/Framed-Art-White-B1-BG.png"));
+    /*  $src4->resizeImage(1500, 1500,\Imagick::FILTER_LANCZOS,1); 
+     $src4->writeImage(public_path("\site-images/Textura-Canvas-mockup.png")); */
+      $src3 = new \Imagick(public_path("image/image-B1-white.png"));
+      $src3->compositeImage($src4, \Imagick::COMPOSITE_MULTIPLY,0,0);
+      $src3->writeImage(public_path("image\multiply_B1-white.png"));
+
+    echo '<img src="\image\multiply_B1-white.png">';
+
+    dd();
     $file = $request->file('file');
     $imageName =  $file->getClientOriginalName();
     $imageName = preg_replace('/\s+/', '', $imageName);
@@ -4782,6 +5137,93 @@ if (!$process8->isSuccessful()) {
 
 
   public function uploadMockup29(Request $request){
+
+    $file = $request->file('file');
+    $imageName =  $file->getClientOriginalName();
+    $imageName = preg_replace('/\s+/', '', $imageName);
+    $filename = pathinfo($imageName, PATHINFO_FILENAME);
+    
+    $extension =  $request->file('file')->getClientOriginalExtension();
+    $image = $filename . "_" . time() . ".".$extension;
+     $file->move('design/', $image); 
+
+     $imageName1 = "/" .  $image; 
+
+     $path = public_path();
+
+
+     $src1 = new \Imagick(public_path("design". $imageName1));
+     $src1->resizeImage(400, null,\Imagick::FILTER_LANCZOS,1); 
+     $src1->writeImage(public_path("design". $imageName1));
+     $src2 = new \Imagick(public_path("\site-images\Framed-Art-White-B2-Mask.png"));
+     
+     $src1->setImageArtifact('compose:args', "1,0,-0.5,0.5"); 
+     
+     $process5 = new Process('magick convert ^
+     '.$path.'\site-images\Framed-Art-White-B2-Mask.png ^
+     -channel A -blur 0x8
+     -compose hardlight
+     '.$path.'\image\ms_light_map-B2-white.png
+     ');
+     
+     /* Makao sam komandu -separate proces 5   -colorspace gray -auto-level ^
+     -blur 0x3 ^
+     -contrast-stretch 0,50%% ^
+     -depth 16 ^  -negate  -channel A -blur 0x8*/
+     
+     $process5->run();
+     if (!$process5->isSuccessful()) {
+     throw new ProcessFailedException($process5);
+     }
+     echo $process5->getOutput();
+     echo '<img src="\image\ms_light_map-B2-black.png">';
+     
+     $process6 = new Process('magick convert ^
+     '.$path.'\design'. $imageName1. ' ^
+     -channel matte -separate ^
+     '.$path.'\image\ms_logo_displace_mask_B2-white.png
+     ');
+     
+     
+     
+     $process6->run();
+     if (!$process6->isSuccessful()) {
+     throw new ProcessFailedException($process6);
+     }
+     echo $process6->getOutput();
+     echo '<img src="\image\ms_logo_displace_mask_B2-white.png">';
+     
+     $process7 = new Process('magick convert ^
+     '.$path.'\design'. $imageName1. ' ^
+     '.$path.'\image\ms_light_map-B2-white.png ^
+     -geometry -340-300 ^
+     -compose Multiply -composite ^
+     '.$path.'\image\ms_logo_displace_mask_B2-white.png ^
+     -compose CopyOpacity -composite ^
+     '.$path.'\image\ms_light_map_logo_B2-white.png
+     ');
+     
+     $process7->run();
+     if (!$process7->isSuccessful()) {
+     throw new ProcessFailedException($process7);
+     }
+     echo $process7->getOutput();
+     echo '<img src="\image\ms_light_map_logo_B2-white.png">';
+
+
+     $src2->compositeImage($src1, \Imagick::COMPOSITE_DSTOVER ,340,300);
+     $src2->writeImage(public_path("image\image-B2-white.png"));
+     echo '<img src="\image\image-B2-white.png">';
+     $src4 = new \Imagick(public_path("site-images/Framed-Art-White-B2-BG.png"));
+    /*  $src4->resizeImage(1500, 1500,\Imagick::FILTER_LANCZOS,1); 
+     $src4->writeImage(public_path("\site-images/Textura-Canvas-mockup.png")); */
+      $src3 = new \Imagick(public_path("image/image-B2-white.png"));
+      $src3->compositeImage($src4, \Imagick::COMPOSITE_MULTIPLY,0,0);
+      $src3->writeImage(public_path("image\multiply_B2-white.png"));
+
+    echo '<img src="\image\multiply_B2-white.png">';
+
+    dd();
     $file = $request->file('file');
     $imageName =  $file->getClientOriginalName();
     $imageName = preg_replace('/\s+/', '', $imageName);
@@ -4951,6 +5393,95 @@ if (!$process8->isSuccessful()) {
 
 
   public function uploadMockup31(Request $request){
+
+    $file = $request->file('file');
+    $imageName =  $file->getClientOriginalName();
+    $imageName = preg_replace('/\s+/', '', $imageName);
+    $filename = pathinfo($imageName, PATHINFO_FILENAME);
+    
+    $extension =  $request->file('file')->getClientOriginalExtension();
+    $image = $filename . "_" . time() . ".".$extension;
+     $file->move('design/', $image); 
+
+     $imageName1 = "/" .  $image; 
+
+     $path = public_path();
+
+
+     $src1 = new \Imagick(public_path("design". $imageName1));
+     $src1->resizeImage(400, null,\Imagick::FILTER_LANCZOS,1); 
+     $src1->writeImage(public_path("design". $imageName1));
+     $src2 = new \Imagick(public_path("\site-images\Thumbnail-Framed-Art-Black-A4-Mask.png"));
+    /*  $src2->resizeImage(1500, 1500,\Imagick::FILTER_LANCZOS,1); 
+     $src2->writeImage(public_path("\site-images\Canvas-mockup-thumbnail.png")); */
+     
+     $src1->setImageArtifact('compose:args', "1,0,-0.5,0.5"); 
+     
+     $process5 = new Process('magick convert ^
+     '.$path.'\site-images\Thumbnail-Framed-Art-Black-A4-Mask.png ^
+     -channel A -blur 0x8
+     -compose hardlight
+     '.$path.'\image\ms_light_map-thumb-black.png
+     ');
+     
+     /* Makao sam komandu -separate proces 5   -colorspace gray -auto-level ^
+     -blur 0x3 ^
+     -contrast-stretch 0,50%% ^
+     -depth 16 ^  -negate  -channel A -blur 0x8*/
+     
+     $process5->run();
+     if (!$process5->isSuccessful()) {
+     throw new ProcessFailedException($process5);
+     }
+     echo $process5->getOutput();
+     echo '<img src="\image\ms_light_map-thumb-black.png">';
+     
+     $process6 = new Process('magick convert ^
+     '.$path.'\design'. $imageName1. ' ^
+     -channel matte -separate ^
+     '.$path.'\image\ms_logo_displace_mask_thumb-black.png
+     ');
+     
+     
+     
+     $process6->run();
+     if (!$process6->isSuccessful()) {
+     throw new ProcessFailedException($process6);
+     }
+     echo $process6->getOutput();
+     echo '<img src="\image\ms_logo_displace_mask_thumb-black.png">';
+     
+     $process7 = new Process('magick convert ^
+     '.$path.'\design'. $imageName1. ' ^
+     '.$path.'\image\ms_light_map-thumb-black.png ^
+     -geometry -340-300 ^
+     -compose Multiply -composite ^
+     '.$path.'\image\ms_logo_displace_mask_thumb-black.png ^
+     -compose CopyOpacity -composite ^
+     '.$path.'\image\ms_light_map_logo_thumb-black.png
+     ');
+     
+     $process7->run();
+     if (!$process7->isSuccessful()) {
+     throw new ProcessFailedException($process7);
+     }
+     echo $process7->getOutput();
+     echo '<img src="\image\ms_light_map_logo_thumb-black.png">';
+
+
+     $src2->compositeImage($src1, \Imagick::COMPOSITE_DSTOVER ,340,300);
+     $src2->writeImage(public_path("image\image-thumb-black.png"));
+     echo '<img src="\image\image-thumb-black.png">';
+     $src4 = new \Imagick(public_path("site-images/Thumbnail-Framed-Art-Black-A4-BG.png"));
+    /*  $src4->resizeImage(1500, 1500,\Imagick::FILTER_LANCZOS,1); 
+     $src4->writeImage(public_path("\site-images/Textura-Canvas-mockup.png")); */
+      $src3 = new \Imagick(public_path("image/image-thumb-black.png"));
+      $src3->compositeImage($src4, \Imagick::COMPOSITE_MULTIPLY,0,0);
+      $src3->writeImage(public_path("image\multiply_thumb-black.png"));
+
+    echo '<img src="\image\multiply_thumb-black.png">'; 
+
+    dd();
     $file = $request->file('file');
     $imageName =  $file->getClientOriginalName();
     $imageName = preg_replace('/\s+/', '', $imageName);
@@ -5036,6 +5567,95 @@ if (!$process8->isSuccessful()) {
 
 
   public function uploadMockup32(Request $request){
+
+    $file = $request->file('file');
+    $imageName =  $file->getClientOriginalName();
+    $imageName = preg_replace('/\s+/', '', $imageName);
+    $filename = pathinfo($imageName, PATHINFO_FILENAME);
+    
+    $extension =  $request->file('file')->getClientOriginalExtension();
+    $image = $filename . "_" . time() . ".".$extension;
+     $file->move('design/', $image); 
+
+     $imageName1 = "/" .  $image; 
+
+     $path = public_path();
+
+
+     $src1 = new \Imagick(public_path("design". $imageName1));
+     $src1->resizeImage(400, null,\Imagick::FILTER_LANCZOS,1); 
+     $src1->writeImage(public_path("design". $imageName1));
+     $src2 = new \Imagick(public_path("\site-images\Framed-Art-Black-B1-Mask.png"));
+    /*  $src2->resizeImage(1500, 1500,\Imagick::FILTER_LANCZOS,1); 
+     $src2->writeImage(public_path("\site-images\Canvas-mockup-thumbnail.png")); */
+     
+     $src1->setImageArtifact('compose:args', "1,0,-0.5,0.5"); 
+     
+     $process5 = new Process('magick convert ^
+     '.$path.'\site-images\Framed-Art-Black-B1-Mask.png ^
+     -channel A -blur 0x8
+     -compose hardlight
+     '.$path.'\image\ms_light_map-B1-black.png
+     ');
+     
+     /* Makao sam komandu -separate proces 5   -colorspace gray -auto-level ^
+     -blur 0x3 ^
+     -contrast-stretch 0,50%% ^
+     -depth 16 ^  -negate  -channel A -blur 0x8*/
+     
+     $process5->run();
+     if (!$process5->isSuccessful()) {
+     throw new ProcessFailedException($process5);
+     }
+     echo $process5->getOutput();
+     echo '<img src="\image\ms_light_map-B1-black.png">';
+     
+     $process6 = new Process('magick convert ^
+     '.$path.'\design'. $imageName1. ' ^
+     -channel matte -separate ^
+     '.$path.'\image\ms_logo_displace_mask_B1-black.png
+     ');
+     
+     
+     
+     $process6->run();
+     if (!$process6->isSuccessful()) {
+     throw new ProcessFailedException($process6);
+     }
+     echo $process6->getOutput();
+     echo '<img src="\image\ms_logo_displace_mask_B1-black.png">';
+     
+     $process7 = new Process('magick convert ^
+     '.$path.'\design'. $imageName1. ' ^
+     '.$path.'\image\ms_light_map-B1-black.png ^
+     -geometry -360-300 ^
+     -compose Multiply -composite ^
+     '.$path.'\image\ms_logo_displace_mask_B1-black.png ^
+     -compose CopyOpacity -composite ^
+     '.$path.'\image\ms_light_map_logo_B1-black.png
+     ');
+     
+     $process7->run();
+     if (!$process7->isSuccessful()) {
+     throw new ProcessFailedException($process7);
+     }
+     echo $process7->getOutput();
+     echo '<img src="\image\ms_light_map_logo_B1-black.png">';
+
+
+     $src2->compositeImage($src1, \Imagick::COMPOSITE_DSTOVER ,360,300);
+     $src2->writeImage(public_path("image\image-B1-black.png"));
+     echo '<img src="\image\image-B1-black.png">';
+     $src4 = new \Imagick(public_path("site-images/Framed-Art-Black-B1-BG.png"));
+    /*  $src4->resizeImage(1500, 1500,\Imagick::FILTER_LANCZOS,1); 
+     $src4->writeImage(public_path("\site-images/Textura-Canvas-mockup.png")); */
+      $src3 = new \Imagick(public_path("image/image-B1-black.png"));
+      $src3->compositeImage($src4, \Imagick::COMPOSITE_MULTIPLY,0,0);
+      $src3->writeImage(public_path("image\multiply_B1-black.png"));
+
+    echo '<img src="\image\multiply_B1-black.png">'; 
+
+    dd();
     $file = $request->file('file');
     $imageName =  $file->getClientOriginalName();
     $imageName = preg_replace('/\s+/', '', $imageName);
@@ -5121,6 +5741,95 @@ if (!$process8->isSuccessful()) {
 
 
   public function uploadMockup33(Request $request){
+
+    $file = $request->file('file');
+    $imageName =  $file->getClientOriginalName();
+    $imageName = preg_replace('/\s+/', '', $imageName);
+    $filename = pathinfo($imageName, PATHINFO_FILENAME);
+    
+    $extension =  $request->file('file')->getClientOriginalExtension();
+    $image = $filename . "_" . time() . ".".$extension;
+     $file->move('design/', $image); 
+
+     $imageName1 = "/" .  $image; 
+
+     $path = public_path();
+
+
+     $src1 = new \Imagick(public_path("design". $imageName1));
+     $src1->resizeImage(400, null,\Imagick::FILTER_LANCZOS,1); 
+     $src1->writeImage(public_path("design". $imageName1));
+     $src2 = new \Imagick(public_path("\site-images\Framed-Art-Black-B2-Mask.png"));
+    /*  $src2->resizeImage(1500, 1500,\Imagick::FILTER_LANCZOS,1); 
+     $src2->writeImage(public_path("\site-images\Canvas-mockup-thumbnail.png")); */
+     
+     $src1->setImageArtifact('compose:args', "1,0,-0.5,0.5"); 
+     
+     $process5 = new Process('magick convert ^
+     '.$path.'\site-images\Framed-Art-Black-B2-Mask.png ^
+     -channel A -blur 0x8
+     -compose hardlight
+     '.$path.'\image\ms_light_map-B2-black.png
+     ');
+     
+     /* Makao sam komandu -separate proces 5   -colorspace gray -auto-level ^
+     -blur 0x3 ^
+     -contrast-stretch 0,50%% ^
+     -depth 16 ^  -negate  -channel A -blur 0x8*/
+     
+     $process5->run();
+     if (!$process5->isSuccessful()) {
+     throw new ProcessFailedException($process5);
+     }
+     echo $process5->getOutput();
+     echo '<img src="\image\ms_light_map-B2-black.png">';
+     
+     $process6 = new Process('magick convert ^
+     '.$path.'\design'. $imageName1. ' ^
+     -channel matte -separate ^
+     '.$path.'\image\ms_logo_displace_mask_B2-black.png
+     ');
+     
+     
+     
+     $process6->run();
+     if (!$process6->isSuccessful()) {
+     throw new ProcessFailedException($process6);
+     }
+     echo $process6->getOutput();
+     echo '<img src="\image\ms_logo_displace_mask_B2-black.png">';
+     
+     $process7 = new Process('magick convert ^
+     '.$path.'\design'. $imageName1. ' ^
+     '.$path.'\image\ms_light_map-B2-black.png ^
+     -geometry -340-300 ^
+     -compose Multiply -composite ^
+     '.$path.'\image\ms_logo_displace_mask_B2-black.png ^
+     -compose CopyOpacity -composite ^
+     '.$path.'\image\ms_light_map_logo_B2-black.png
+     ');
+     
+     $process7->run();
+     if (!$process7->isSuccessful()) {
+     throw new ProcessFailedException($process7);
+     }
+     echo $process7->getOutput();
+     echo '<img src="\image\ms_light_map_logo_B2-black.png">';
+
+
+     $src2->compositeImage($src1, \Imagick::COMPOSITE_DSTOVER ,340,300);
+     $src2->writeImage(public_path("image\image-B2-black.png"));
+     echo '<img src="\image\image-B2-black.png">';
+     $src4 = new \Imagick(public_path("site-images/Framed-Art-Black-B2-BG.png"));
+    /*  $src4->resizeImage(1500, 1500,\Imagick::FILTER_LANCZOS,1); 
+     $src4->writeImage(public_path("\site-images/Textura-Canvas-mockup.png")); */
+      $src3 = new \Imagick(public_path("image/image-B2-black.png"));
+      $src3->compositeImage($src4, \Imagick::COMPOSITE_MULTIPLY,0,0);
+      $src3->writeImage(public_path("image\multiply_B2-black.png"));
+
+    echo '<img src="\image\multiply_B2-black.png">'; 
+
+    dd();
     $file = $request->file('file');
     $imageName =  $file->getClientOriginalName();
     $imageName = preg_replace('/\s+/', '', $imageName);
@@ -5227,8 +5936,8 @@ if (!$process8->isSuccessful()) {
     
 
 $src1 = new \Imagick(public_path("design". $imageName1));
-/* $src1->resizeImage(530, null,\Imagick::FILTER_LANCZOS,1); 
-$src1->writeImage(public_path("design". $imageName1)); */
+ $src1->resizeImage(550, null,\Imagick::FILTER_LANCZOS,1); 
+$src1->writeImage(public_path("design". $imageName1)); 
 $src2 = new \Imagick(public_path("\site-images\Huawei-P20-Bezpozadinecopy.png"));
 
 
@@ -5272,7 +5981,7 @@ echo '<img src="\image\ms_logo_displace_mask_phone1.png">';
 $process7 = new Process('magick convert ^
 '.$path.'\design'. $imageName1. ' ^
 '.$path.'\image\ms_light_map-phone1.png ^
--geometry -150-140 ^
+-geometry -260-130 ^
 -compose Multiply -composite ^
 '.$path.'\image\ms_logo_displace_mask_phone1.png ^
 -compose CopyOpacity -composite ^
@@ -5289,7 +5998,7 @@ echo '<img src="\image\ms_light_map_logo_phone1.png">';
 $src1->setImageVirtualPixelMethod(\Imagick::VIRTUALPIXELMETHOD_TRANSPARENT);
 $src1->setImageArtifact('compose:args', "1,0,-0.5,0.5");
 $src = new \Imagick(public_path("\image\ms_light_map_logo_phone1.png"));
-$src2->compositeImage($src, \Imagick::COMPOSITE_DSTOVER, 150, 140);
+$src2->compositeImage($src, \Imagick::COMPOSITE_DSTOVER, 260, 130);
 $src2->writeImage(public_path("image/output1.png"));
 $process5 = new Process('magick  convert '.$path.'\image\output1.png 
 -flatten  '.$path.'\image\out.png 
@@ -5586,7 +6295,168 @@ $process5 = new Process('magick  convert '.$path.'\image\output1.png
 
 
   public function uploadMockup37(Request $request){
+    $file = $request->file('file');
+    $imageName =  $file->getClientOriginalName();
+    $imageName = preg_replace('/\s+/', '', $imageName);
+    $filename = pathinfo($imageName, PATHINFO_FILENAME);
+    
+    $extension =  $request->file('file')->getClientOriginalExtension();
+   // dd($extension);
+    $image = $filename . "_" . time() . ".".$extension;
+     $file->move('design/', $image); 
 
+     $imageName1 = "/" .  $image; 
+
+     $path = public_path();
+
+    
+    
+
+     $src1 = new \Imagick(public_path("design". $imageName1));
+     $src1->resizeImage(80, null,\Imagick::FILTER_LANCZOS,1); 
+     $src1->writeImage(public_path("design". $imageName1));
+    $Y = $src1->getImageHeight()/2;
+     $process = new Process('magick convert '.$path.'/design'.$imageName1.' -roll +0+'. $Y . ' ' .$path.'/image/_orange_270_r.png
+');
+
+$process->run();
+if (!$process->isSuccessful()) {
+throw new ProcessFailedException($process);
+}
+echo $process->getOutput();
+echo '<img src="\image\_orange_270_r.png">';
+
+$process1 = new Process('magick  montage  '.$path.'/design'.$imageName1.' +clone +clone +clone -tile x4 
+-geometry +0+0  '.$path.'/image/_1col.png
+');
+
+$process1->run();
+if (!$process1->isSuccessful()) {
+throw new ProcessFailedException($process1);
+}
+echo $process1->getOutput();
+echo '<img src="\image\_1col.png">';
+
+$process2 = new Process('magick  montage  '.$path.'/image/_orange_270_r.png +clone +clone +clone
+ -tile x4 -geometry +0+0  '.$path.'/image/_2col.png
+
+
+');
+
+$process2->run();
+if (!$process2->isSuccessful()) {
+throw new ProcessFailedException($process2);
+}
+echo $process2->getOutput();
+echo '<img src="\image\_2col.png">';
+
+$process3 = new Process('magick  montage -geometry +0+0 '.$path.'/image/_1col.png '.$path.'/image/_2col.png '.$path.'/image/_2cols.png
+');
+
+$process3->run();
+if (!$process3->isSuccessful()) {
+throw new ProcessFailedException($process3);
+}
+echo $process3->getOutput();
+echo '<img src="\image\_2cols.png">';
+
+$process4 = new Process('magick  convert '.$path.'/image/_2cols.png -write mpr:tile  +delete -size 1920x1080 tile:mpr:tile '.$path.'/image/_wallpap.png
+');
+
+$process4->run();
+if (!$process4->isSuccessful()) {
+throw new ProcessFailedException($process4);
+}
+echo $process3->getOutput();
+echo '<img src="\image\_wallpap.png">';
+
+$src2 = new \Imagick(public_path("\site-images\Wall-Wallpapers-Mask.png"));
+/* $src2->resizeImage(1000, null,\Imagick::FILTER_LANCZOS,1); 
+$src2->writeImage(public_path("\site-images\Tapete-Thumbnail-mockup-2.png")); */
+
+
+
+$src1->setImageArtifact('compose:args', "1,0,-0.5,0.5"); 
+
+$process5 = new Process('magick convert ^
+'.$path.'\site-images\Wall-Wallpapers-Mask.png ^
+-channel A -blur 0x8
+-compose hardlight
+'.$path.'\image\ms_light_map-tapeta-2.png
+');
+
+/* Makao sam komandu -separate proces 5   -colorspace gray -auto-level ^
+-blur 0x3 ^
+-contrast-stretch 0,50%% ^
+-depth 16 ^  -negate  -channel A -blur 0x8*/
+
+$process5->run();
+if (!$process5->isSuccessful()) {
+throw new ProcessFailedException($process5);
+}
+echo $process5->getOutput();
+echo '<img src="\image\ms_light_map-tapeta-2.png">';
+
+$process6 = new Process('magick convert ^
+'.$path.'/image/_wallpap.png ^
+
+'.$path.'\image\ms_logo_displace_mask_tapeta-2.png
+');
+
+
+
+$process6->run();
+if (!$process6->isSuccessful()) {
+throw new ProcessFailedException($process6);
+}
+echo $process6->getOutput();
+echo '<img src="\image\ms_logo_displace_mask_tapeta-2.png">';
+
+$process7 = new Process('magick convert ^
+'.$path.'\image/_wallpap.png ^
+'.$path.'\image\ms_light_map-tapeta-2.png ^
+-geometry -0-0 ^
+
+'.$path.'\image\ms_logo_displace_mask_tapeta-2.png ^
+
+');
+
+$process7->run();
+if (!$process7->isSuccessful()) {
+throw new ProcessFailedException($process7);
+}
+echo $process7->getOutput();
+echo '<img src="\image\ms_light_map_logo_tapeta-2.png">';
+
+$src1->setImageVirtualPixelMethod(\Imagick::VIRTUALPIXELMETHOD_TRANSPARENT);
+$src1->setImageArtifact('compose:args', "1,0,-0.5,0.5");
+$src = new \Imagick(public_path("\image\ms_light_map_logo_tapeta-2.png"));
+$src3 = new \Imagick(public_path("image/_wallpap.png"));
+$src2->compositeImage($src3, \Imagick::COMPOSITE_DSTOVER, 0, 0);
+$src2->writeImage(public_path("image/output1.png"));
+$process5 = new Process('magick  convert '.$path.'\image\output1.png 
+-flatten  '.$path.'\image\out.png 
+');
+ $process5->run();
+    if (!$process5->isSuccessful()) {
+     throw new ProcessFailedException($process5);
+    }
+     echo $process5->getOutput();
+     echo '<img src="\image\out.png">';
+
+     $process6 = new Process('magick  convert '.$path.'\image\out.png ^
+     '.$path.'\site-images\Wall-Wallpapers-BG.png ^
+     -compose Multiply -composite ^
+      '.$path.'\image\multiply_wallpaper.png 
+');
+ $process6->run();
+    if (!$process6->isSuccessful()) {
+     throw new ProcessFailedException($process6);
+    }
+     echo $process6->getOutput();
+     echo '<img src="\image\multiply_wallpaper.png">';
+     
+    dd();
     $file = $request->file('file');
     $imageName =  $file->getClientOriginalName();
     $imageName = preg_replace('/\s+/', '', $imageName);
@@ -5907,6 +6777,93 @@ $process5 = new Process('magick  convert '.$path.'\image\output1.png
 
 
      $src1 = new \Imagick(public_path("design". $imageName1));
+     $src1->resizeImage(500, null,\Imagick::FILTER_LANCZOS,1); 
+     $src1->writeImage(public_path("design". $imageName1));
+     $src2 = new \Imagick(public_path("\site-images\U1-Canvas_Slika-Maska.png"));
+   
+     
+     $src1->setImageArtifact('compose:args', "1,0,-0.5,0.5"); 
+     
+     $process5 = new Process('magick convert ^
+     '.$path.'\site-images\U1-Canvas_Slika-Maska.png ^
+     -channel A -blur 0x8
+     -compose hardlight
+     '.$path.'\image\ms_light_map-canvas.png
+     ');
+     
+     /* Makao sam komandu -separate proces 5   -colorspace gray -auto-level ^
+     -blur 0x3 ^
+     -contrast-stretch 0,50%% ^
+     -depth 16 ^  -negate  -channel A -blur 0x8*/
+     
+     $process5->run();
+     if (!$process5->isSuccessful()) {
+     throw new ProcessFailedException($process5);
+     }
+     echo $process5->getOutput();
+     echo '<img src="\image\ms_light_map-canvas.png">';
+     
+     $process6 = new Process('magick convert ^
+     '.$path.'\design'. $imageName1. ' ^
+     -channel matte -separate ^
+     '.$path.'\image\ms_logo_displace_mask_canvas.png
+     ');
+     
+     
+     
+     $process6->run();
+     if (!$process6->isSuccessful()) {
+     throw new ProcessFailedException($process6);
+     }
+     echo $process6->getOutput();
+     echo '<img src="\image\ms_logo_displace_mask_canvas.png">';
+     
+     $process7 = new Process('magick convert ^
+     '.$path.'\design'. $imageName1. ' ^
+     '.$path.'\image\ms_light_map-canvas.png ^
+     -geometry -350-250 ^
+     -compose Multiply -composite ^
+     '.$path.'\image\ms_logo_displace_mask_canvas.png ^
+     -compose CopyOpacity -composite ^
+     '.$path.'\image\ms_light_map_logo_canvas.png
+     ');
+     
+     $process7->run();
+     if (!$process7->isSuccessful()) {
+     throw new ProcessFailedException($process7);
+     }
+     echo $process7->getOutput();
+     echo '<img src="\image\ms_light_map_logo_canvas.png">';
+
+
+     $src2->compositeImage($src1, \Imagick::COMPOSITE_DSTOVER ,350,250);
+     $src2->writeImage(public_path("image\image-canvas.png"));
+     echo '<img src="\image\image-canvas.png">';
+     $src4 = new \Imagick(public_path("site-images/U1-Canvas_Slika-BG.png"));
+    /*  $src4->resizeImage(1500, 1500,\Imagick::FILTER_LANCZOS,1); 
+     $src4->writeImage(public_path("\site-images/Textura-Canvas-mockup.png")); */
+      $src3 = new \Imagick(public_path("image/image-canvas.png"));
+      $src3->compositeImage($src4, \Imagick::COMPOSITE_MULTIPLY,0,0);
+      $src3->writeImage(public_path("image\multiply_canvas.png"));
+
+    echo '<img src="\image\multiply_canvas.png">';
+
+    dd();
+    $file = $request->file('file');
+    $imageName =  $file->getClientOriginalName();
+    $imageName = preg_replace('/\s+/', '', $imageName);
+    $filename = pathinfo($imageName, PATHINFO_FILENAME);
+    
+    $extension =  $request->file('file')->getClientOriginalExtension();
+    $image = $filename . "_" . time() . ".".$extension;
+     $file->move('design/', $image); 
+
+     $imageName1 = "/" .  $image; 
+
+     $path = public_path();
+
+
+     $src1 = new \Imagick(public_path("design". $imageName1));
      $src1->resizeImage(700, null,\Imagick::FILTER_LANCZOS,1); 
      $src1->writeImage(public_path("design". $imageName1));
      $src2 = new \Imagick(public_path("\site-images\Canvas-mockup-thumbnail.png"));
@@ -6009,16 +6966,9 @@ $process5 = new Process('magick  convert '.$path.'\image\output1.png
 
      $path = public_path();
 
-     $process0 = new Process('magick convert '.$path.'\site-images\Torbacrnaruckamanjam.jpg
-     -resize 1200x2000
-     '.$path.'\site-images\Torbacrnaruckamanjam.jpg
-      ');
-      $process0->run();
-      if (!$process0->isSuccessful()) {
-          throw new ProcessFailedException($process0);
-      } 
+ 
 
-      $process = new Process('magick convert   '.$path.'\site-images\Torbacrnaruckamanjam.jpg[403x422+440+501] 
+      $process = new Process('magick convert   '.$path.'\site-images\1Tote-Bag-Black-handle-BG-Redlined.jpg[403x422+450+501] 
      -colorspace gray 
      -blur 10x250 
      -auto-level
@@ -6062,12 +7012,12 @@ $process5 = new Process('magick  convert '.$path.'\image\output1.png
      list($width, $height) = getimagesize($path.'\image\ms_temp.png');
 
    
-     $X = 440 + (403-$width)/2;
+     $X = 450 + (403-$width)/2;
      $Y = 501 +  (422-$height)/2;
     
 
       $process3 = new Process('magick convert 
-     '.$path.'\site-images\Torbacrnaruckamanjam.jpg[403x422+410+451] 
+     '.$path.'\site-images\1Tote-Bag-Black-handle-BG-Redlined.jpg[403x422+450+451] 
      -colorspace gray -blur 10x250 -auto-level 
      -depth 16 
      '.$path.'\image\ms_displace_map_girl_white_regular.png
@@ -6099,7 +7049,7 @@ $process5 = new Process('magick  convert '.$path.'\image\output1.png
 
      
       $process5 = new Process('magick convert ^
-     '.$path.'\site-images\Torbacrnaruckamanjam.jpg[403x422+410+451] ^
+     '.$path.'\site-images\1Tote-Bag-Black-handle-BG-Redlined.jpg[403x422+450+451] ^
      -colorspace gray -auto-level ^
      -blur 0x4 ^
      -contrast-stretch 0,30%% ^
@@ -6144,14 +7094,49 @@ if (!$process7->isSuccessful()) {
 }
     echo $process7->getOutput();
     echo '<img src="\image\ms_light_map_logo.png">';
-    
-   
-   /*  -geometry +984+1101 */
 
+    $src1 = new \Imagick(public_path("\image\ms_light_map_logo.png"));
+    $src2 = new \Imagick(public_path("site-images/2Tote-Bag-Red-handle-Mask.png"));
+    $src6 = new \Imagick(public_path("site-images/1Tote-Bag-Black-handle-Mask-Red-lined.png"));
+    $src2->compositeImage($src1, \Imagick::COMPOSITE_DSTOVER ,450,451);
+    $src2->writeImage(public_path("image\image-ceger.png"));
+
+    $src6->compositeImage($src1, \Imagick::COMPOSITE_DSTOVER ,450,451);
+    $src6->writeImage(public_path("image\image-cager-red.png"));
+    echo '<img src="\image\image-ceger.png">';
+/*    
+    $process10 = new Process('magick convert ^
+    '.$path.'\image\ms_light_map_logo.png ^
+    '.$path.'\site-images\2Tote-Bag-Red-handle-Mask.png ^
+    -geometry +'.$X.'+'.$Y.'
+    -compose DstOver -composite ^
+    '.$path.'\image\ms_light_map_logo_croped.png
+    ');
+
+$process10->run();
+if (!$process10->isSuccessful()) {
+   throw new ProcessFailedException($process10);
+}
+   echo $process10->getOutput();
+   echo '<img src="\imageimage-ceger.png">';
+    */
+   
+    $src4 = new \Imagick(public_path("site-images/1Tote-Bag-Black-handle-BG-Redlined.jpg"));
+    $src5 = new \Imagick(public_path("site-images/1Tote-Bag-Black-handle-BG-Redlined.jpg"));
+  /*   $src4->resizeImage(1500, 1500,\Imagick::FILTER_LANCZOS,1); 
+    $src4->writeImage(public_path("\site-images/Textura-Canvas-mockup.png")); */
+     $src3 = new \Imagick(public_path("image/image-ceger.png"));
+     $src4->compositeImage($src3, \Imagick::COMPOSITE_OVER,0,0);
+     $src4->writeImage(public_path("image\multiply_ceger.png"));
+     $src5->compositeImage($src6, \Imagick::COMPOSITE_OVER,0,0);
+     $src5->writeImage(public_path("image\multiply_ceger1.png"));
+   echo '<img src="\image\multiply_ceger.png">'; 
+   echo '<img src="\image\multiply_ceger1.png">'; 
+dd();
      $process8 = new Process('magick convert ^
      '.$path.'\site-images\Torbacrvenaruckamanja.jpg ^
-     '.$path.'\image\ms_light_map_logo.png ^
-     -geometry +'.$X.'+'.$Y.'
+     '.$path.'\image\image-ceger.png ^
+    
      -compose over    -composite ^
      -depth 24 ^
      '.$path.'\image\ms_product.png
@@ -6494,6 +7479,95 @@ dd();
   }
 
   public function uploadMockup43(Request $request){
+
+    $file = $request->file('file');
+    $imageName =  $file->getClientOriginalName();
+    $imageName = preg_replace('/\s+/', '', $imageName);
+    $filename = pathinfo($imageName, PATHINFO_FILENAME);
+    
+    $extension =  $request->file('file')->getClientOriginalExtension();
+    $image = $filename . "_" . time() . ".".$extension;
+     $file->move('design/', $image); 
+
+     $imageName1 = "/" .  $image; 
+
+     $path = public_path();
+
+
+     $src1 = new \Imagick(public_path("design". $imageName1));
+     $src1->resizeImage(300, null,\Imagick::FILTER_LANCZOS,1); 
+     $src1->writeImage(public_path("design". $imageName1));
+     $src2 = new \Imagick(public_path("\site-images\Podmetac-Kruzni-Mask.png"));
+    /*  $src2->resizeImage(1500, 1500,\Imagick::FILTER_LANCZOS,1); 
+     $src2->writeImage(public_path("\site-images\Canvas-mockup-thumbnail.png")); */
+     
+     $src1->setImageArtifact('compose:args', "1,0,-0.5,0.5"); 
+     
+     $process5 = new Process('magick convert ^
+     '.$path.'\site-images\Podmetac-Kruzni-Mask.png ^
+     -channel A -blur 0x8
+     -compose hardlight
+     '.$path.'\image\ms_light_map-coaster.png
+     ');
+     
+     /* Makao sam komandu -separate proces 5   -colorspace gray -auto-level ^
+     -blur 0x3 ^
+     -contrast-stretch 0,50%% ^
+     -depth 16 ^  -negate  -channel A -blur 0x8*/
+     
+     $process5->run();
+     if (!$process5->isSuccessful()) {
+     throw new ProcessFailedException($process5);
+     }
+     echo $process5->getOutput();
+     echo '<img src="\image\ms_light_map-coaster.png">';
+     
+     $process6 = new Process('magick convert ^
+     '.$path.'\design'. $imageName1. ' ^
+     -channel matte -separate ^
+     '.$path.'\image\ms_logo_displace_mask_coaster.png
+     ');
+     
+     
+     
+     $process6->run();
+     if (!$process6->isSuccessful()) {
+     throw new ProcessFailedException($process6);
+     }
+     echo $process6->getOutput();
+     echo '<img src="\image\ms_logo_displace_mask_coaster.png">';
+     
+     $process7 = new Process('magick convert ^
+     '.$path.'\design'. $imageName1. ' ^
+     '.$path.'\image\ms_light_map-coaster.png ^
+     -geometry -460-350 ^
+     -compose Multiply -composite ^
+     '.$path.'\image\ms_logo_displace_mask_coaster.png ^
+     -compose CopyOpacity -composite ^
+     '.$path.'\image\ms_light_map_logo_coaster.png
+     ');
+     
+     $process7->run();
+     if (!$process7->isSuccessful()) {
+     throw new ProcessFailedException($process7);
+     }
+     echo $process7->getOutput();
+     echo '<img src="\image\ms_light_map_logo_coaster.png">';
+
+
+     $src2->compositeImage($src1, \Imagick::COMPOSITE_DSTOVER ,460,350);
+     $src2->writeImage(public_path("image\image-coaster.png"));
+     echo '<img src="\image\image-coaster.png">';
+     $src4 = new \Imagick(public_path("site-images/Podmetac-Kruznit-BG.png"));
+    /*  $src4->resizeImage(1500, 1500,\Imagick::FILTER_LANCZOS,1); 
+     $src4->writeImage(public_path("\site-images/Textura-Canvas-mockup.png")); */
+      $src3 = new \Imagick(public_path("image/image-coaster.png"));
+      $src3->compositeImage($src4, \Imagick::COMPOSITE_DSTOVER           ,0,0);
+      $src3->writeImage(public_path("image\multiply_coaster.png"));
+
+    echo '<img src="\image\multiply_coaster.png">'; 
+
+    dd();
     $file = $request->file('file');
     $imageName =  $file->getClientOriginalName();
     $imageName = preg_replace('/\s+/', '', $imageName);
@@ -6600,6 +7674,114 @@ dd();
 
 
   public function uploadMockup44(Request $request){
+
+    $file = $request->file('file');
+    $imageName =  $file->getClientOriginalName();
+    $imageName = preg_replace('/\s+/', '', $imageName);
+    $filename = pathinfo($imageName, PATHINFO_FILENAME);
+    
+    $extension =  $request->file('file')->getClientOriginalExtension();
+    $image = $filename . "_" . time() . ".".$extension;
+     $file->move('design/', $image); 
+
+     $imageName1 = "/" .  $image; 
+
+     $path = public_path();
+
+
+     $src1 = new \Imagick(public_path("design". $imageName1));
+     $src1->resizeImage(300, null,\Imagick::FILTER_LANCZOS,1); 
+     $src1->writeImage(public_path("design". $imageName1));
+     $src2 = new \Imagick(public_path("\site-images\Podmetac-Kvadrat-Maska.png"));
+    /*  $src2->resizeImage(1500, 1500,\Imagick::FILTER_LANCZOS,1); 
+     $src2->writeImage(public_path("\site-images\Canvas-mockup-thumbnail.png")); */
+     
+     $src1->setImageArtifact('compose:args', "1,0,-0.5,0.5"); 
+     
+     $process5 = new Process('magick convert ^
+     '.$path.'\site-images\Podmetac-Kvadrat-Maska.png ^
+     -channel A -blur 0x8
+     -compose hardlight
+     '.$path.'\image\ms_light_map-coaster-square.png
+     ');
+     
+     /* Makao sam komandu -separate proces 5   -colorspace gray -auto-level ^
+     -blur 0x3 ^
+     -contrast-stretch 0,50%% ^
+     -depth 16 ^  -negate  -channel A -blur 0x8*/
+     
+     $process5->run();
+     if (!$process5->isSuccessful()) {
+     throw new ProcessFailedException($process5);
+     }
+     echo $process5->getOutput();
+     echo '<img src="\image\ms_light_map-coaster-square.png">';
+     
+     $process6 = new Process('magick convert ^
+     '.$path.'\design'. $imageName1. ' ^
+     -channel matte -separate ^
+     '.$path.'\image\ms_logo_displace_mask_coaster-square.png
+     ');
+     
+     
+     
+     $process6->run();
+     if (!$process6->isSuccessful()) {
+     throw new ProcessFailedException($process6);
+     }
+     echo $process6->getOutput();
+     echo '<img src="\image\ms_logo_displace_mask_coaster-square.png">';
+     
+     $process7 = new Process('magick convert ^
+     '.$path.'\design'. $imageName1. ' ^
+     '.$path.'\image\ms_light_map-coaster-square.png ^
+     -geometry -520-350 ^
+     -compose Multiply -composite ^
+     '.$path.'\image\ms_logo_displace_mask_coaster-square.png ^
+     -compose CopyOpacity -composite ^
+     '.$path.'\image\ms_light_map_logo_coaster-square.png
+     ');
+     
+     $process7->run();
+     if (!$process7->isSuccessful()) {
+     throw new ProcessFailedException($process7);
+     }
+     echo $process7->getOutput();
+     echo '<img src="\image\ms_light_map_logo_coaster-square.png">';
+
+
+     $process7 = new Process('magick convert ^
+     '.$path.'\image\ms_light_map_logo_coaster-square.png ^
+     -matte                     ^
+     -virtual-pixel transparent ^
+     -distort Perspective       ^
+     "0,0,-20,20 0,300,20,320 300,300,320,280 300,0,280,-20" ^
+     '.$path.'\image\ms_displaced_logo_perspective.png
+   
+      ');
+
+ $process7->run();
+ if (!$process7->isSuccessful()) {
+     throw new ProcessFailedException($process7);
+ }
+     echo $process7->getOutput();
+     echo '<img src="\image\ms_displaced_logo_perspective.png">';
+
+     $src1 = new \Imagick(public_path("\image\ms_displaced_logo_perspective.png"));
+
+     $src2->compositeImage($src1, \Imagick::COMPOSITE_DSTOVER ,520,350);
+     $src2->writeImage(public_path("image\image-coaster-square.png"));
+     echo '<img src="\image\image-coaster-square.png">';
+     $src4 = new \Imagick(public_path("site-images/Podmetac-Kvadrat-BG.png"));
+    /*  $src4->resizeImage(1500, 1500,\Imagick::FILTER_LANCZOS,1); 
+     $src4->writeImage(public_path("\site-images/Textura-Canvas-mockup.png")); */
+      $src3 = new \Imagick(public_path("image/image-coaster-square.png"));
+      $src3->compositeImage($src4, \Imagick::COMPOSITE_DSTOVER           ,0,0);
+      $src3->writeImage(public_path("image\multiply_coaster-square.png"));
+
+    echo '<img src="\image\multiply_coaster-square.png">'; 
+
+    dd();
     $file = $request->file('file');
     $imageName =  $file->getClientOriginalName();
     $imageName = preg_replace('/\s+/', '', $imageName);
@@ -6704,6 +7886,196 @@ dd();
   }
 
   public function uploadMockup45(Request $request){
+
+    $file = $request->file('file');
+    $imageName =  $file->getClientOriginalName();
+    $imageName = preg_replace('/\s+/', '', $imageName);
+    $filename = pathinfo($imageName, PATHINFO_FILENAME);
+    
+    $extension =  $request->file('file')->getClientOriginalExtension();
+   // dd($extension);
+    $image = $filename . "_" . time() . ".".$extension;
+     $file->move('design/', $image); 
+
+     $path = public_path();
+
+   /*   $process0 = new Process('magick convert '.$path.'\site-images\Torbacrnaruckamanjam.jpg
+     -resize 1200x2000
+     '.$path.'\site-images\Torbacrnaruckamanjam.jpg
+      ');
+      $process0->run();
+      if (!$process0->isSuccessful()) {
+          throw new ProcessFailedException($process0);
+      }  */
+
+      $process = new Process('magick convert   '.$path.'\site-images\Gift-Bag-Small-White-BG.png[403x422+450+501] 
+     -colorspace gray 
+     -blur 10x250 
+     -auto-level
+     '.$path.'\image\displace_map.png
+      ');
+
+ $process->run();
+ if (!$process->isSuccessful()) {
+     throw new ProcessFailedException($process);
+ }
+     echo $process->getOutput();
+     echo '<img src="\image\displace_map.png">'; 
+
+     $imageName1 = "/" .  $image; 
+
+     $process1 = new Process('magick convert   '.$path.'\design' . $imageName1 . '
+     -resize 400x400
+     '.$path.'\design' . $imageName1 . '
+     '); 
+     
+  $process1->run();
+   if (!$process1->isSuccessful()) {
+       throw new ProcessFailedException($process1);    
+ } 
+
+
+     $process2 = new Process('magick convert 
+     '.$path.'\design' . $imageName1 . '
+     -bordercolor transparent -border 12x12 -thumbnail 403x422 
+     '.$path.'\image\ms_temp.png
+      ');
+
+ $process2->run();
+ if (!$process1->isSuccessful()) {
+     throw new ProcessFailedException($process2);
+ }
+     echo $process2->getOutput();
+     echo '<img src="\image\ms_temp.png">';
+
+
+     list($width, $height) = getimagesize($path.'\image\ms_temp.png');
+
+   
+     $X = 450 + (403-$width)/2;
+     $Y = 501 +  (422-$height)/2;
+    
+
+      $process3 = new Process('magick convert 
+     '.$path.'\site-images\Gift-Bag-Small-White-BG.png[403x422+450+451] 
+     -colorspace gray -blur 10x250 -auto-level 
+     -depth 16 
+     '.$path.'\image\ms_displace_map_girl_white_regular.png
+      ');
+
+ $process3->run();
+ if (!$process3->isSuccessful()) {
+     throw new ProcessFailedException($process3);
+ }
+     echo $process3->getOutput();
+     echo '<img src="\image\ms_displace_map_girl_white_regular.png">'; 
+    
+     $process4 = new Process('magick convert ^
+     '.$path.'\image\ms_temp.png ^
+     '.$path.'\image\ms_displace_map_girl_white_regular.png ^
+     -alpha set -virtual-pixel transparent ^
+     -compose displace -set option:compose:args -5x-5 -composite ^
+     -depth 16 ^
+     '.$path.'\image\ms_displaced_logo.png
+   
+      ');
+
+ $process4->run();
+ if (!$process4->isSuccessful()) {
+     throw new ProcessFailedException($process4);
+ }
+     echo $process4->getOutput();
+     echo '<img src="\image\ms_displaced_logo.png">';
+
+     
+      $process5 = new Process('magick convert ^
+     '.$path.'\site-images\Gift-Bag-Small-White-BG.png[403x422+450+451] ^
+     -colorspace gray -auto-level ^
+     -blur 0x4 ^
+     -contrast-stretch 0,30%% ^
+     -depth 16 ^
+     '.$path.'\image\ms_light_map_girl_white_regular.png
+      ');
+
+/*         Makao sam komandu -separate proces 5 */
+
+ $process5->run();
+ if (!$process5->isSuccessful()) {
+     throw new ProcessFailedException($process5);
+ }
+     echo $process5->getOutput();
+     echo '<img src="\image\ms_light_map_girl_white_regular.png">'; 
+     
+     $process6 = new Process('magick convert ^
+     '.$path.'\image\ms_displaced_logo.png ^
+     -channel matte -separate ^
+     '.$path.'\image\ms_logo_displace_mask.png
+      ');
+
+ $process6->run();
+ if (!$process6->isSuccessful()) {
+     throw new ProcessFailedException($process6);
+ }
+     echo $process6->getOutput();
+     echo '<img src="\image\ms_logo_displace_mask.png">';
+     
+     $process7 = new Process('magick convert ^
+     '.$path.'\image\ms_displaced_logo.png ^
+     '.$path.'\image\ms_light_map_girl_white_regular.png ^
+     -compose Multiply -composite ^
+     '.$path.'\image\ms_logo_displace_mask.png ^
+     -compose CopyOpacity -composite ^
+     '.$path.'\image\ms_light_map_logo.png
+     ');
+
+$process7->run();
+if (!$process7->isSuccessful()) {
+    throw new ProcessFailedException($process7);
+}
+    echo $process7->getOutput();
+    echo '<img src="\image\ms_light_map_logo.png">';
+
+    $src1 = new \Imagick(public_path("\image\ms_light_map_logo.png"));
+    $src2 = new \Imagick(public_path("site-images/Gift-Bag-Small-White-Mask.png"));
+    $src6 = new \Imagick(public_path("site-images/Gift-Bag-Small-Black-Mask.png"));
+    $src2->compositeImage($src1, \Imagick::COMPOSITE_DSTOVER ,450,451);
+    $src2->writeImage(public_path("image\image-tote.png"));
+
+    $src6->compositeImage($src1, \Imagick::COMPOSITE_DSTOVER ,450,451);
+    $src6->writeImage(public_path("image\image-tote-black.png")); 
+    echo '<img src="\image\image-tote.png">';
+    echo '<img src="\image\image-tote-black.png">';
+    $src7 = new \Imagick(public_path("image\image-tote-black.png"));
+/*    
+    $process10 = new Process('magick convert ^
+    '.$path.'\image\ms_light_map_logo.png ^
+    '.$path.'\site-images\2Tote-Bag-Red-handle-Mask.png ^
+    -geometry +'.$X.'+'.$Y.'
+    -compose DstOver -composite ^
+    '.$path.'\image\ms_light_map_logo_croped.png
+    ');
+
+$process10->run();
+if (!$process10->isSuccessful()) {
+   throw new ProcessFailedException($process10);
+}
+   echo $process10->getOutput();
+   echo '<img src="\imageimage-ceger.png">';
+    */
+   
+    $src4 = new \Imagick(public_path("site-images/Gift-Bag-Small-White-BG.png"));
+    $src5 = new \Imagick(public_path("site-images/Gift-Bag-Small-Black-BG.png"));
+  /*   $src4->resizeImage(1500, 1500,\Imagick::FILTER_LANCZOS,1); 
+    $src4->writeImage(public_path("\site-images/Textura-Canvas-mockup.png")); */
+     $src3 = new \Imagick(public_path("image/image-tote.png"));
+     $src4->compositeImage($src3, \Imagick::COMPOSITE_SRCOVER,0,0);
+     $src4->writeImage(public_path("image\multiply_tote.png"));
+      $src5->compositeImage($src7, \Imagick::COMPOSITE_SRCOVER,0,0);
+     $src5->writeImage(public_path("image\multiply_tote1.png")); 
+   echo '<img src="\image\multiply_tote.png">'; 
+    echo '<img src="\image\multiply_tote1.png">';  
+
+    dd();
     $file = $request->file('file');
     $imageName =  $file->getClientOriginalName();
     $imageName = preg_replace('/\s+/', '', $imageName);
@@ -6900,6 +8272,197 @@ if (!$process9->isSuccessful()) {
 
 
   public function uploadMockup46(Request $request){
+
+    $file = $request->file('file');
+    $imageName =  $file->getClientOriginalName();
+    $imageName = preg_replace('/\s+/', '', $imageName);
+    $filename = pathinfo($imageName, PATHINFO_FILENAME);
+    
+    $extension =  $request->file('file')->getClientOriginalExtension();
+   // dd($extension);
+    $image = $filename . "_" . time() . ".".$extension;
+     $file->move('design/', $image); 
+
+     $path = public_path();
+
+   /*   $process0 = new Process('magick convert '.$path.'\site-images\Torbacrnaruckamanjam.jpg
+     -resize 1200x2000
+     '.$path.'\site-images\Torbacrnaruckamanjam.jpg
+      ');
+      $process0->run();
+      if (!$process0->isSuccessful()) {
+          throw new ProcessFailedException($process0);
+      }  */
+
+      $process = new Process('magick convert   '.$path.'\site-images\Gift-Bag-Big-White-BG.png[403x422+450+501] 
+     -colorspace gray 
+     -blur 10x250 
+     -auto-level
+     '.$path.'\image\displace_map.png
+      ');
+
+ $process->run();
+ if (!$process->isSuccessful()) {
+     throw new ProcessFailedException($process);
+ }
+     echo $process->getOutput();
+     echo '<img src="\image\displace_map.png">'; 
+
+     $imageName1 = "/" .  $image; 
+
+     $process1 = new Process('magick convert   '.$path.'\design' . $imageName1 . '
+     -resize 400x400
+     '.$path.'\design' . $imageName1 . '
+     '); 
+     
+  $process1->run();
+   if (!$process1->isSuccessful()) {
+       throw new ProcessFailedException($process1);    
+ } 
+
+
+     $process2 = new Process('magick convert 
+     '.$path.'\design' . $imageName1 . '
+     -bordercolor transparent -border 12x12 -thumbnail 403x422 
+     '.$path.'\image\ms_temp.png
+      ');
+
+ $process2->run();
+ if (!$process1->isSuccessful()) {
+     throw new ProcessFailedException($process2);
+ }
+     echo $process2->getOutput();
+     echo '<img src="\image\ms_temp.png">';
+
+
+     list($width, $height) = getimagesize($path.'\image\ms_temp.png');
+
+   
+     $X = 450 + (403-$width)/2;
+     $Y = 501 +  (422-$height)/2;
+    
+
+      $process3 = new Process('magick convert 
+     '.$path.'\site-images\Gift-Bag-Big-White-BG.png[403x422+450+451] 
+     -colorspace gray -blur 10x250 -auto-level 
+     -depth 16 
+     '.$path.'\image\ms_displace_map_girl_white_regular.png
+      ');
+
+ $process3->run();
+ if (!$process3->isSuccessful()) {
+     throw new ProcessFailedException($process3);
+ }
+     echo $process3->getOutput();
+     echo '<img src="\image\ms_displace_map_girl_white_regular.png">'; 
+    
+     $process4 = new Process('magick convert ^
+     '.$path.'\image\ms_temp.png ^
+     '.$path.'\image\ms_displace_map_girl_white_regular.png ^
+     -alpha set -virtual-pixel transparent ^
+     -compose displace -set option:compose:args -5x-5 -composite ^
+     -depth 16 ^
+     '.$path.'\image\ms_displaced_logo.png
+   
+      ');
+
+ $process4->run();
+ if (!$process4->isSuccessful()) {
+     throw new ProcessFailedException($process4);
+ }
+     echo $process4->getOutput();
+     echo '<img src="\image\ms_displaced_logo.png">';
+
+     
+      $process5 = new Process('magick convert ^
+     '.$path.'\site-images\Gift-Bag-Big-White-BG.png[403x422+450+451] ^
+     -colorspace gray -auto-level ^
+     -blur 0x4 ^
+     -contrast-stretch 0,30%% ^
+     -depth 16 ^
+     '.$path.'\image\ms_light_map_girl_white_regular.png
+      ');
+
+/*         Makao sam komandu -separate proces 5 */
+
+ $process5->run();
+ if (!$process5->isSuccessful()) {
+     throw new ProcessFailedException($process5);
+ }
+     echo $process5->getOutput();
+     echo '<img src="\image\ms_light_map_girl_white_regular.png">'; 
+     
+     $process6 = new Process('magick convert ^
+     '.$path.'\image\ms_displaced_logo.png ^
+     -channel matte -separate ^
+     '.$path.'\image\ms_logo_displace_mask.png
+      ');
+
+ $process6->run();
+ if (!$process6->isSuccessful()) {
+     throw new ProcessFailedException($process6);
+ }
+     echo $process6->getOutput();
+     echo '<img src="\image\ms_logo_displace_mask.png">';
+     
+     $process7 = new Process('magick convert ^
+     '.$path.'\image\ms_displaced_logo.png ^
+     '.$path.'\image\ms_light_map_girl_white_regular.png ^
+     -compose Multiply -composite ^
+     '.$path.'\image\ms_logo_displace_mask.png ^
+     -compose CopyOpacity -composite ^
+     '.$path.'\image\ms_light_map_logo.png
+     ');
+
+$process7->run();
+if (!$process7->isSuccessful()) {
+    throw new ProcessFailedException($process7);
+}
+    echo $process7->getOutput();
+    echo '<img src="\image\ms_light_map_logo.png">';
+
+    $src1 = new \Imagick(public_path("\image\ms_light_map_logo.png"));
+    $src2 = new \Imagick(public_path("site-images/Gift-Bag-Big-White-Mask.png"));
+    $src6 = new \Imagick(public_path("site-images/Gift-Bag-Big-Black-Mask.png"));
+    $src2->compositeImage($src1, \Imagick::COMPOSITE_DSTOVER ,450,451);
+    $src2->writeImage(public_path("image\image-tote.png"));
+
+    $src6->compositeImage($src1, \Imagick::COMPOSITE_DSTOVER ,450,451);
+    $src6->writeImage(public_path("image\image-tote-black.png")); 
+    echo '<img src="\image\image-tote.png">';
+    echo '<img src="\image\image-tote-black.png">';
+    $src7 = new \Imagick(public_path("image\image-tote-black.png"));
+/*    
+    $process10 = new Process('magick convert ^
+    '.$path.'\image\ms_light_map_logo.png ^
+    '.$path.'\site-images\2Tote-Bag-Red-handle-Mask.png ^
+    -geometry +'.$X.'+'.$Y.'
+    -compose DstOver -composite ^
+    '.$path.'\image\ms_light_map_logo_croped.png
+    ');
+
+$process10->run();
+if (!$process10->isSuccessful()) {
+   throw new ProcessFailedException($process10);
+}
+   echo $process10->getOutput();
+   echo '<img src="\imageimage-ceger.png">';
+    */
+   
+    $src4 = new \Imagick(public_path("site-images/Gift-Bag-Big-White-BG.png"));
+    $src5 = new \Imagick(public_path("site-images/Gift-Bag-Big-Black-BG.png"));
+  /*   $src4->resizeImage(1500, 1500,\Imagick::FILTER_LANCZOS,1); 
+    $src4->writeImage(public_path("\site-images/Textura-Canvas-mockup.png")); */
+     $src3 = new \Imagick(public_path("image/image-tote.png"));
+     $src4->compositeImage($src3, \Imagick::COMPOSITE_SRCOVER,0,0);
+     $src4->writeImage(public_path("image\multiply_tote.png"));
+      $src5->compositeImage($src7, \Imagick::COMPOSITE_SRCOVER,0,0);
+     $src5->writeImage(public_path("image\multiply_tote1.png")); 
+   echo '<img src="\image\multiply_tote.png">'; 
+    echo '<img src="\image\multiply_tote1.png">';
+
+
+    dd();
     $file = $request->file('file');
     $imageName =  $file->getClientOriginalName();
     $imageName = preg_replace('/\s+/', '', $imageName);
@@ -7300,7 +8863,7 @@ if (!$process9->isSuccessful()) {
      $process7 = new Process('magick convert ^
      '.$path.'\design'. $imageName1. ' ^
      '.$path.'\image\ms_light_map-phone1.png ^
-     -geometry -430-270 ^
+     -geometry -430-360 ^
      -compose Multiply -composite ^
      '.$path.'\image\ms_logo_displace_mask_phone1.png ^
      -compose CopyOpacity -composite ^
@@ -7317,7 +8880,7 @@ if (!$process9->isSuccessful()) {
      $src1->setImageVirtualPixelMethod(\Imagick::VIRTUALPIXELMETHOD_TRANSPARENT);
      $src1->setImageArtifact('compose:args', "1,0,-0.5,0.5");
      $src = new \Imagick(public_path("\image\ms_light_map_logo_phone1.png"));
-     $src2->compositeImage($src, \Imagick::COMPOSITE_DSTOVER, 430, 270);
+     $src2->compositeImage($src, \Imagick::COMPOSITE_DSTOVER, 430, 360);
      $src2->writeImage(public_path("image/output1.png"));
      $process5 = new Process('magick  convert '.$path.'\image\output1.png  
      -flatten  '.$path.'\image\out.png 
@@ -7396,7 +8959,7 @@ if (!$process9->isSuccessful()) {
      $process7 = new Process('magick convert ^
      '.$path.'\design'. $imageName1. ' ^
      '.$path.'\image\ms_light_map-phone1.png ^
-     -geometry -425-280 ^
+     -geometry -425-330 ^
      -compose Multiply -composite ^
      '.$path.'\image\ms_logo_displace_mask_phone1.png ^
      -compose CopyOpacity -composite ^
@@ -7413,7 +8976,7 @@ if (!$process9->isSuccessful()) {
      $src1->setImageVirtualPixelMethod(\Imagick::VIRTUALPIXELMETHOD_TRANSPARENT);
      $src1->setImageArtifact('compose:args', "1,0,-0.5,0.5");
      $src = new \Imagick(public_path("\image\ms_light_map_logo_phone1.png"));
-     $src2->compositeImage($src, \Imagick::COMPOSITE_DSTOVER, 425, 280);
+     $src2->compositeImage($src, \Imagick::COMPOSITE_DSTOVER, 425, 330);
      $src2->writeImage(public_path("image/output1.png"));
      $process5 = new Process('magick  convert '.$path.'\image\output1.png  
      -flatten  '.$path.'\image\out.png 
@@ -7490,7 +9053,7 @@ if (!$process9->isSuccessful()) {
      $process7 = new Process('magick convert ^
      '.$path.'\design'. $imageName1. ' ^
      '.$path.'\image\ms_light_map-puzle.png ^
-     -geometry -205-100 ^
+     -geometry -405-350 ^
      -compose Multiply -composite ^
      '.$path.'\image\ms_logo_displace_mask_puzle.png ^
      -compose CopyOpacity -composite ^
@@ -7506,8 +9069,12 @@ if (!$process9->isSuccessful()) {
      
      $src1->setImageVirtualPixelMethod(\Imagick::VIRTUALPIXELMETHOD_TRANSPARENT);
      $src1->setImageArtifact('compose:args', "1,0,-0.5,0.5");
+     
      $src = new \Imagick(public_path("\image\ms_light_map_logo_puzle.png"));
-     $src2->compositeImage($src, \Imagick::COMPOSITE_DSTOVER, 205, 100);
+   
+
+
+     $src2->compositeImage($src, \Imagick::COMPOSITE_DSTOVER, 405, 350);
      $src2->writeImage(public_path("image/output1.png"));
      $process5 = new Process('magick  convert '.$path.'\image\output1.png  
      -flatten  '.$path.'\image\out.png 
@@ -7562,7 +9129,7 @@ if (!$process9->isSuccessful()) {
            throw new ProcessFailedException($processa);
        }  */
 
-      $process = new Process('magick convert   '.$path.'\site-images\Neseser.jpg[303x322+630+481] 
+      $process = new Process('magick convert   '.$path.'\site-images\Neseser.jpg[303x322+600+451] 
      -colorspace gray 
      -blur 10x250 
      -auto-level
@@ -7606,12 +9173,12 @@ if (!$process9->isSuccessful()) {
      list($width, $height) = getimagesize($path.'\image\ms_temp.png');
 
     
-     $X = 630 + (303-$width)/2;
-     $Y = 481 +  (322-$height)/2;
+     $X = 600 + (303-$width)/2;
+     $Y = 451 +  (322-$height)/2;
     
 
       $process3 = new Process('magick convert 
-     '.$path.'\site-images\Neseser.jpg[303x322+630+481] 
+     '.$path.'\site-images\Neseser.jpg[303x322+600+481] 
      -colorspace gray -blur 10x250 -auto-level 
      -depth 16 
      '.$path.'\image\ms_displace_map_girl_white_regular.png
@@ -7660,7 +9227,7 @@ if (!$process9->isSuccessful()) {
 
      
       $process5 = new Process('magick convert ^
-     '.$path.'\site-images\Neseser.jpg[303x322+630+481] ^
+     '.$path.'\site-images\Neseser.jpg[303x322+600+481] ^
      -colorspace gray -auto-level ^
      -blur 0x4 ^
      -contrast-stretch 0,30%% ^
@@ -7689,7 +9256,13 @@ if (!$process9->isSuccessful()) {
  }
      echo $process6->getOutput();
      echo '<img src="\image\ms_logo_displace_mask.png">';
-     
+
+     $src1 = new \Imagick(public_path("\image\ms_displaced_logo_perspective.png"));
+     $src2 = new \Imagick(public_path("site-images/Zipper-Cases-Maska.png"));
+     $src6 = new \Imagick(public_path("site-images/Gift-Bag-Big-Black-Mask.png"));
+     $src2->compositeImage($src1, \Imagick::COMPOSITE_DSTOVER ,600,451);
+     $src2->writeImage(public_path("image\image-zip.png"));
+     echo '<img src="\image\image-zip.png">';
 /*      $process7 = new Process('magick convert ^
      '.$path.'\image\ms_displaced_logo.png ^
      '.$path.'\image\ms_light_map_girl_white_regular.png ^
@@ -7711,8 +9284,8 @@ if (!$process7->isSuccessful()) {
 
      $process8 = new Process('magick convert ^
      '.$path.'\site-images\Neseser.jpg ^
-     '.$path.'\image\ms_displaced_logo_perspective.png ^
-     -geometry +'.$X.'+'.$Y.'
+     '.$path.'\image\image-zip.png ^
+    
      -compose over    -composite ^
      -depth 24 ^
      '.$path.'\image\ms_product.png
@@ -7746,6 +9319,177 @@ if (!$process9->isSuccessful()) {
 
 
   public function uploadMockup52(Request $request){
+
+    $file = $request->file('file');
+    $imageName =  $file->getClientOriginalName();
+    $imageName = preg_replace('/\s+/', '', $imageName);
+    $filename = pathinfo($imageName, PATHINFO_FILENAME);
+    
+    $extension =  $request->file('file')->getClientOriginalExtension();
+   // dd($extension);
+    $image = $filename . "_" . time() . ".".$extension;
+     $file->move('design/', $image); 
+    $path = public_path();
+  /*   $process0 = new Process('magick convert   '.$path.'\site-images\maskemockup-01.jpg
+    -resize 1200x1200
+    '.$path.'\site-images\maskemockup-01.jpg
+     ');
+
+$process0->run();
+if (!$process0->isSuccessful()) {
+    throw new ProcessFailedException($process);
+} */
+     $process = new Process('magick convert   '.$path.'\site-images\Face-Mask-White-BG.png[203x222+620+401] 
+    
+    '.$path.'\image\displace_map.png
+     ');
+
+$process->run();
+if (!$process->isSuccessful()) {
+    throw new ProcessFailedException($process);
+}
+    echo $process->getOutput();
+    echo '<img src="\image\displace_map.png">'; 
+
+    $imageName1 = "/" .  $image; 
+
+    $process1 = new Process('magick convert   '.$path.'\design' . $imageName1 . '
+    -resize 200x200
+    '.$path.'\design' . $imageName1 . '
+    '); 
+    
+ $process1->run();
+  if (!$process1->isSuccessful()) {
+      throw new ProcessFailedException($process1);    
+} 
+
+
+    $process2 = new Process('magick convert 
+    '.$path.'\design' . $imageName1 . '
+    -bordercolor transparent -border 12x12 -thumbnail 203x222 
+    '.$path.'\image\ms_temp.png
+     ');
+
+$process2->run();
+if (!$process1->isSuccessful()) {
+    throw new ProcessFailedException($process2);
+}
+    echo $process2->getOutput();
+    echo '<img src="\image\ms_temp.png">';
+
+
+    list($width, $height) = getimagesize($path.'\image\ms_temp.png');
+
+
+    $X = 620 + (203-$width)/2;
+    $Y = 401 +  (222-$height)/2;
+   
+
+     $process3 = new Process('magick convert 
+    '.$path.'\site-images\Face-Mask-White-BG.png[203x222+620+401] 
+    -colorspace gray -blur 10x250 -auto-level 
+    -depth 16 
+    '.$path.'\image\ms_displace_map_girl_white_regular.png
+     ');
+
+$process3->run();
+if (!$process3->isSuccessful()) {
+    throw new ProcessFailedException($process3);
+}
+    echo $process3->getOutput();
+    echo '<img src="\image\ms_displace_map_girl_white_regular.png">'; 
+   
+    $process4 = new Process('magick convert ^
+    '.$path.'\image\ms_temp.png ^
+    '.$path.'\image\ms_displace_map_girl_white_regular.png ^
+    -alpha set -virtual-pixel transparent ^
+    -compose displace -set option:compose:args -5x-5 -composite ^
+    -depth 16 ^
+    '.$path.'\image\ms_displaced_logo.png
+  
+     ');
+
+$process4->run();
+if (!$process4->isSuccessful()) {
+    throw new ProcessFailedException($process4);
+}
+    echo $process4->getOutput();
+    echo '<img src="\image\ms_displaced_logo.png">';
+
+    $process7 = new Process('magick convert ^
+    '.$path.'\image\ms_displaced_logo.png ^
+    -matte                     ^
+    -virtual-pixel transparent ^
+    -distort Perspective       ^
+    "0,0,20,20 0,200,20,220 200,200,180,220 200,0,220,10" ^
+    '.$path.'\image\ms_displaced_logo_perspective.png
+  
+     ');
+
+$process7->run();
+if (!$process7->isSuccessful()) {
+    throw new ProcessFailedException($process7);
+}
+
+echo '<img src="\image\ms_displaced_logo_perspective.png">'; 
+
+
+     $process5 = new Process('magick convert ^
+    '.$path.'\site-images\Face-Mask-White-BG.png[203x222+620+401] ^
+    -colorspace gray -auto-level ^
+    -blur 0x4 ^
+    -contrast-stretch 0,30%% ^
+    -depth 16 ^
+    '.$path.'\image\ms_light_map_girl_white_regular.png
+     ');
+
+/*         Makao sam komandu -separate proces 5 */
+
+$process5->run();
+if (!$process5->isSuccessful()) {
+    throw new ProcessFailedException($process5);
+}
+    echo $process5->getOutput();
+    echo '<img src="\image\ms_light_map_girl_white_regular.png">'; 
+    
+    $process6 = new Process('magick convert ^
+    '.$path.'\image\ms_displaced_logo_perspective.png ^
+    -channel matte -separate ^
+    '.$path.'\image\ms_logo_displace_mask.png
+     ');
+
+$process6->run();
+if (!$process6->isSuccessful()) {
+    throw new ProcessFailedException($process6);
+}
+    echo $process6->getOutput();
+    echo '<img src="\image\ms_logo_displace_mask.png">';
+    
+
+    $src1 = new \Imagick(public_path("\image\ms_displaced_logo_perspective.png"));
+    $src2 = new \Imagick(public_path("site-images/Face-Mask-White-Canvas.png"));
+    $src2->compositeImage($src1, \Imagick::COMPOSITE_DSTOVER ,620,401);
+    $src2->writeImage(public_path("image\image-mask-black.png"));
+    echo '<img src="\image\image-mask-black.png">';
+
+
+    $process8 = new Process('magick convert ^
+    '.$path.'\site-images\Face-Mask-White-BG.png ^
+    '.$path.'\image\image-mask-black.png ^
+    -geometry +0+0
+    -compose over    -composite ^
+    -depth 24 ^
+    '.$path.'\image\ms_product.png
+    ');
+
+$process8->run();
+if (!$process8->isSuccessful()) {
+   throw new ProcessFailedException($process8);
+}
+   echo $process8->getOutput();
+   echo '<img src="\image\ms_product.png">';
+
+    dd();
     $file = $request->file('file');
     $imageName =  $file->getClientOriginalName();
     $imageName = preg_replace('/\s+/', '', $imageName);
@@ -7996,7 +9740,7 @@ if (!$process9->isSuccessful()) {
      $process7 = new Process('magick convert ^
      '.$path.'\design'. $imageName1. ' ^
      '.$path.'\image\ms_light_map-canvas.png ^
-     -geometry -300-250 ^
+     -geometry -330-280 ^
      -compose Multiply -composite ^
      '.$path.'\image\ms_logo_displace_mask_canvas.png ^
      -compose CopyOpacity -composite ^
@@ -8014,7 +9758,7 @@ if (!$process9->isSuccessful()) {
      /* $src2->compositeImage($src1, \Imagick::COMPOSITE_DSTOVER ,390,450);
      $src2->writeImage(public_path("image\image-canvas.png")); */
 
-     $src2->compositeImage($src1, \Imagick::COMPOSITE_DSTOVER  ,300,250);
+     $src2->compositeImage($src1, \Imagick::COMPOSITE_DSTOVER  ,330,280);
      $src2->writeImage(public_path("image\image-canvas.png"));
      echo '<img src="\image\image-canvas.png">';
      $src4 = new \Imagick(public_path("site-images/Solja.png"));
@@ -8213,6 +9957,176 @@ $src2->writeImage(public_path("image/output1.png"));
 
 
   public function uploadMockup56(Request $request){
+    $file = $request->file('file');
+    $imageName =  $file->getClientOriginalName();
+    $imageName = preg_replace('/\s+/', '', $imageName);
+    $filename = pathinfo($imageName, PATHINFO_FILENAME);
+    
+    $extension =  $request->file('file')->getClientOriginalExtension();
+   // dd($extension);
+    $image = $filename . "_" . time() . ".".$extension;
+     $file->move('design/', $image); 
+    $path = public_path();
+  /*   $process0 = new Process('magick convert   '.$path.'\site-images\maskemockup-01.jpg
+    -resize 1200x1200
+    '.$path.'\site-images\maskemockup-01.jpg
+     ');
+
+$process0->run();
+if (!$process0->isSuccessful()) {
+    throw new ProcessFailedException($process);
+} */
+     $process = new Process('magick convert   '.$path.'\site-images\Face-Mask-Black-BG.png[203x222+620+401] 
+    
+    '.$path.'\image\displace_map.png
+     ');
+
+$process->run();
+if (!$process->isSuccessful()) {
+    throw new ProcessFailedException($process);
+}
+    echo $process->getOutput();
+    echo '<img src="\image\displace_map.png">'; 
+
+    $imageName1 = "/" .  $image; 
+
+    $process1 = new Process('magick convert   '.$path.'\design' . $imageName1 . '
+    -resize 200x200
+    '.$path.'\design' . $imageName1 . '
+    '); 
+    
+ $process1->run();
+  if (!$process1->isSuccessful()) {
+      throw new ProcessFailedException($process1);    
+} 
+
+
+    $process2 = new Process('magick convert 
+    '.$path.'\design' . $imageName1 . '
+    -bordercolor transparent -border 12x12 -thumbnail 203x222 
+    '.$path.'\image\ms_temp.png
+     ');
+
+$process2->run();
+if (!$process1->isSuccessful()) {
+    throw new ProcessFailedException($process2);
+}
+    echo $process2->getOutput();
+    echo '<img src="\image\ms_temp.png">';
+
+
+    list($width, $height) = getimagesize($path.'\image\ms_temp.png');
+
+
+    $X = 620 + (203-$width)/2;
+    $Y = 401 +  (222-$height)/2;
+   
+
+     $process3 = new Process('magick convert 
+    '.$path.'\site-images\Face-Mask-Black-BG.png[203x222+620+401] 
+    -colorspace gray -blur 10x250 -auto-level 
+    -depth 16 
+    '.$path.'\image\ms_displace_map_girl_white_regular.png
+     ');
+
+$process3->run();
+if (!$process3->isSuccessful()) {
+    throw new ProcessFailedException($process3);
+}
+    echo $process3->getOutput();
+    echo '<img src="\image\ms_displace_map_girl_white_regular.png">'; 
+   
+    $process4 = new Process('magick convert ^
+    '.$path.'\image\ms_temp.png ^
+    '.$path.'\image\ms_displace_map_girl_white_regular.png ^
+    -alpha set -virtual-pixel transparent ^
+    -compose displace -set option:compose:args -5x-5 -composite ^
+    -depth 16 ^
+    '.$path.'\image\ms_displaced_logo.png
+  
+     ');
+
+$process4->run();
+if (!$process4->isSuccessful()) {
+    throw new ProcessFailedException($process4);
+}
+    echo $process4->getOutput();
+    echo '<img src="\image\ms_displaced_logo.png">';
+
+    $process7 = new Process('magick convert ^
+    '.$path.'\image\ms_displaced_logo.png ^
+    -matte                     ^
+    -virtual-pixel transparent ^
+    -distort Perspective       ^
+    "0,0,20,20 0,200,20,220 200,200,180,220 200,0,220,10" ^
+    '.$path.'\image\ms_displaced_logo_perspective.png
+  
+     ');
+
+$process7->run();
+if (!$process7->isSuccessful()) {
+    throw new ProcessFailedException($process7);
+}
+
+echo '<img src="\image\ms_displaced_logo_perspective.png">'; 
+
+
+     $process5 = new Process('magick convert ^
+    '.$path.'\site-images\Face-Mask-Black-BG.png[203x222+620+401] ^
+    -colorspace gray -auto-level ^
+    -blur 0x4 ^
+    -contrast-stretch 0,30%% ^
+    -depth 16 ^
+    '.$path.'\image\ms_light_map_girl_white_regular.png
+     ');
+
+/*         Makao sam komandu -separate proces 5 */
+
+$process5->run();
+if (!$process5->isSuccessful()) {
+    throw new ProcessFailedException($process5);
+}
+    echo $process5->getOutput();
+    echo '<img src="\image\ms_light_map_girl_white_regular.png">'; 
+    
+    $process6 = new Process('magick convert ^
+    '.$path.'\image\ms_displaced_logo_perspective.png ^
+    -channel matte -separate ^
+    '.$path.'\image\ms_logo_displace_mask.png
+     ');
+
+$process6->run();
+if (!$process6->isSuccessful()) {
+    throw new ProcessFailedException($process6);
+}
+    echo $process6->getOutput();
+    echo '<img src="\image\ms_logo_displace_mask.png">';
+    
+
+    $src1 = new \Imagick(public_path("\image\ms_displaced_logo_perspective.png"));
+    $src2 = new \Imagick(public_path("site-images/Face-Mask-Black-Mask.png"));
+    $src2->compositeImage($src1, \Imagick::COMPOSITE_DSTOVER ,620,401);
+    $src2->writeImage(public_path("image\image-mask-black.png"));
+    echo '<img src="\image\image-mask-black.png">';
+
+
+    $process8 = new Process('magick convert ^
+    '.$path.'\site-images\Face-Mask-Black-BG.png ^
+    '.$path.'\image\image-mask-black.png ^
+    -geometry +0+0
+    -compose over    -composite ^
+    -depth 24 ^
+    '.$path.'\image\ms_product.png
+    ');
+
+$process8->run();
+if (!$process8->isSuccessful()) {
+   throw new ProcessFailedException($process8);
+}
+   echo $process8->getOutput();
+   echo '<img src="\image\ms_product.png">';
+
+    dd();
     $file = $request->file('file');
     $imageName =  $file->getClientOriginalName();
     $imageName = preg_replace('/\s+/', '', $imageName);
@@ -8647,6 +10561,318 @@ if (!$process9->isSuccessful()) {
     echo '<img src="\image\multiply_coaster.png">'; 
   }
 
+
+  public function uploadMockup60(Request $request){
+    $file = $request->file('file');
+    $imageName =  $file->getClientOriginalName();
+    $imageName = preg_replace('/\s+/', '', $imageName);
+    $filename = pathinfo($imageName, PATHINFO_FILENAME);
+    
+    $extension =  $request->file('file')->getClientOriginalExtension();
+   // dd($extension);
+    $image = $filename . "_" . time() . ".".$extension;
+     $file->move('design/', $image); 
+
+     $imageName1 = "/" .  $image; 
+
+     $path = public_path();
+
+    
+ 
+    
+
+$src1 = new \Imagick(public_path("design". $imageName1));
+/* $src1->resizeImage(530, null,\Imagick::FILTER_LANCZOS,1); 
+$src1->writeImage(public_path("design". $imageName1)); */
+$src2 = new \Imagick(public_path("\site-images\Custommaska.png"));
+
+
+
+$src1->setImageArtifact('compose:args', "1,0,-0.5,0.5"); 
+
+$process5 = new Process('magick convert ^
+'.$path.'\site-images\Custommaska.png ^
+-channel A -blur 0x8
+-compose hardlight
+'.$path.'\image\ms_light_map-custom.png
+');
+
+/* Makao sam komandu -separate proces 5   -colorspace gray -auto-level ^
+-blur 0x3 ^
+-contrast-stretch 0,50%% ^
+-depth 16 ^  -negate  -channel A -blur 0x8*/
+
+$process5->run();
+if (!$process5->isSuccessful()) {
+throw new ProcessFailedException($process5);
+}
+echo $process5->getOutput();
+echo '<img src="\image\ms_light_map-custom.png">';
+
+$process6 = new Process('magick convert ^
+'.$path.'\design'. $imageName1. ' ^
+-channel matte -separate ^
+'.$path.'\image\ms_logo_displace_mask_custom.png
+');
+
+
+
+$process6->run();
+if (!$process6->isSuccessful()) {
+throw new ProcessFailedException($process6);
+}
+echo $process6->getOutput();
+echo '<img src="\image\ms_logo_displace_mask_custom.png">';
+
+$process7 = new Process('magick convert ^
+'.$path.'\design'. $imageName1. ' ^
+'.$path.'\image\ms_light_map-custom.png ^
+-geometry -150-140 ^
+-compose Multiply -composite ^
+'.$path.'\image\ms_logo_displace_mask_custom.png ^
+-compose CopyOpacity -composite ^
+'.$path.'\image\ms_light_map_logo_custom.png
+');
+
+$process7->run();
+if (!$process7->isSuccessful()) {
+throw new ProcessFailedException($process7);
+}
+echo $process7->getOutput();
+echo '<img src="\image\ms_light_map_logo_custom.png">';
+
+$src1->setImageVirtualPixelMethod(\Imagick::VIRTUALPIXELMETHOD_TRANSPARENT);
+$src1->setImageArtifact('compose:args', "1,0,-0.5,0.5");
+$src = new \Imagick(public_path("\image\ms_light_map_logo_custom.png"));
+$src2->compositeImage($src, \Imagick::COMPOSITE_DSTOVER, 150, 140);
+$src2->writeImage(public_path("image/custom1.png"));
+$process5 = new Process('magick  convert '.$path.'\image\custom1.png 
+-flatten  '.$path.'\image\custom.png 
+');
+ $process5->run();
+    if (!$process5->isSuccessful()) {
+     throw new ProcessFailedException($process5);
+    }
+     echo $process5->getOutput();
+     echo '<img src="\design'.$imageName1.'">';
+     echo '<img src="\image\custom.png">'; 
+
+     $process10 = new Process('magick  convert '.$path.'\site-images\Custommaska.png -background "rgb(0,0,0)" 
+     -flatten  '.$path.'\image\Custom-Crna.png
+    ');
+       $process10->run();
+          if (!$process10->isSuccessful()) {
+           throw new ProcessFailedException($process10);
+          }
+           echo $process10->getOutput();
+           echo '<img src="\image\Custom-Crna.png">'; 
+
+
+/* $src1 = new \Imagick(public_path("\image\ms_light_map_logo_phone.png")); */
+
+
+$process8 = new Process('magick convert ^
+'.$path.'\image\Custom-Crna.png ^
+'.$path.'\image\custom1.png ^
+-compose ATop -composite ^
+
+-depth 16 ^
+'.$path.'\image\ms_product_Custom.png
+');
+
+$process8->run();
+if (!$process8->isSuccessful()) {
+throw new ProcessFailedException($process8);
+}
+echo $process8->getOutput();
+echo '<img src="\image\ms_product_Custom.png">';
+  }
+
+  public function uploadMockup61(Request $request){
+    $file = $request->file('file');
+    $imageName =  $file->getClientOriginalName();
+    $imageName = preg_replace('/\s+/', '', $imageName);
+    $filename = pathinfo($imageName, PATHINFO_FILENAME);
+    
+    $extension =  $request->file('file')->getClientOriginalExtension();
+   // dd($extension);
+    $image = $filename . "_" . time() . ".".$extension;
+     $file->move('design/', $image); 
+
+     $path = public_path();
+
+ 
+
+      $process = new Process('magick convert   '.$path.'\site-images\Bibs-Blue-BG.png[403x422+400+451] 
+     -colorspace gray 
+     -blur 10x250 
+     -auto-level
+     '.$path.'\image\displace_map.png
+      ');
+
+ $process->run();
+ if (!$process->isSuccessful()) {
+     throw new ProcessFailedException($process);
+ }
+     echo $process->getOutput();
+     echo '<img src="\image\displace_map.png">'; 
+
+     $imageName1 = "/" .  $image; 
+
+     $process1 = new Process('magick convert   '.$path.'\design' . $imageName1 . '
+     -resize 200x200
+     '.$path.'\design' . $imageName1 . '
+     '); 
+     
+  $process1->run();
+   if (!$process1->isSuccessful()) {
+       throw new ProcessFailedException($process1);    
+ } 
+
+
+     $process2 = new Process('magick convert 
+     '.$path.'\design' . $imageName1 . '
+     -bordercolor transparent -border 12x12 -thumbnail 403x422 
+     '.$path.'\image\ms_temp.png
+      ');
+
+ $process2->run();
+ if (!$process1->isSuccessful()) {
+     throw new ProcessFailedException($process2);
+ }
+     echo $process2->getOutput();
+     echo '<img src="\image\ms_temp.png">';
+
+
+     list($width, $height) = getimagesize($path.'\image\ms_temp.png');
+
+   
+     $X = 440 + (403-$width)/2;
+     $Y = 451 +  (422-$height)/2;
+    
+
+      $process3 = new Process('magick convert 
+     '.$path.'\site-images\Bibs-Blue-BG.png[403x422+400+451] 
+     -colorspace gray -blur 10x250 -auto-level 
+     -depth 16 
+     '.$path.'\image\ms_displace_map_girl_white_regular.png
+      ');
+
+ $process3->run();
+ if (!$process3->isSuccessful()) {
+     throw new ProcessFailedException($process3);
+ }
+     echo $process3->getOutput();
+     echo '<img src="\image\ms_displace_map_girl_white_regular.png">'; 
+    
+     $process4 = new Process('magick convert ^
+     '.$path.'\image\ms_temp.png ^
+     '.$path.'\image\ms_displace_map_girl_white_regular.png ^
+     -alpha set -virtual-pixel transparent ^
+     -compose displace -set option:compose:args -5x-5 -composite ^
+     -depth 16 ^
+     '.$path.'\image\ms_displaced_logo.png
+   
+      ');
+
+ $process4->run();
+ if (!$process4->isSuccessful()) {
+     throw new ProcessFailedException($process4);
+ }
+     echo $process4->getOutput();
+     echo '<img src="\image\ms_displaced_logo.png">';
+
+     
+      $process5 = new Process('magick convert ^
+     '.$path.'\site-images\Bibs-Blue-BG.png[403x422+400+451] ^
+     -colorspace gray -auto-level ^
+     -blur 0x4 ^
+     -contrast-stretch 0,30%% ^
+     -depth 16 ^
+     '.$path.'\image\ms_light_map_girl_white_regular.png
+      ');
+
+/*         Makao sam komandu -separate proces 5 */
+
+ $process5->run();
+ if (!$process5->isSuccessful()) {
+     throw new ProcessFailedException($process5);
+ }
+     echo $process5->getOutput();
+     echo '<img src="\image\ms_light_map_girl_white_regular.png">'; 
+     
+     $process6 = new Process('magick convert ^
+     '.$path.'\image\ms_displaced_logo.png ^
+     -channel matte -separate ^
+     '.$path.'\image\ms_logo_displace_mask.png
+      ');
+
+ $process6->run();
+ if (!$process6->isSuccessful()) {
+     throw new ProcessFailedException($process6);
+ }
+     echo $process6->getOutput();
+     echo '<img src="\image\ms_logo_displace_mask.png">';
+     
+     $process7 = new Process('magick convert ^
+     '.$path.'\image\ms_displaced_logo.png ^
+     '.$path.'\image\ms_light_map_girl_white_regular.png ^
+     -compose Multiply -composite ^
+     '.$path.'\image\ms_logo_displace_mask.png ^
+     -compose CopyOpacity -composite ^
+     '.$path.'\image\ms_light_map_logo.png
+     ');
+
+$process7->run();
+if (!$process7->isSuccessful()) {
+    throw new ProcessFailedException($process7);
+}
+    echo $process7->getOutput();
+    echo '<img src="\image\ms_light_map_logo.png">';
+
+    $src1 = new \Imagick(public_path("\image\ms_light_map_logo.png"));
+    $src2 = new \Imagick(public_path("site-images/Bibs-Blue-Mask.png"));
+    $src6 = new \Imagick(public_path("site-images/1Tote-Bag-Black-handle-Mask-Red-lined.png"));
+    $src2->compositeImage($src1, \Imagick::COMPOSITE_DSTOVER ,400,451);
+    $src2->writeImage(public_path("image\image-bibs.png"));
+
+    /* $src6->compositeImage($src1, \Imagick::COMPOSITE_DSTOVER ,450,451);
+    $src6->writeImage(public_path("image\image-cager-red.png"));
+    echo '<img src="\image\image-ceger.png">'; */
+/*    
+    $process10 = new Process('magick convert ^
+    '.$path.'\image\ms_light_map_logo.png ^
+    '.$path.'\site-images\2Tote-Bag-Red-handle-Mask.png ^
+    -geometry +'.$X.'+'.$Y.'
+    -compose DstOver -composite ^
+    '.$path.'\image\ms_light_map_logo_croped.png
+    ');
+
+$process10->run();
+if (!$process10->isSuccessful()) {
+   throw new ProcessFailedException($process10);
+}
+   echo $process10->getOutput();
+   echo '<img src="\imageimage-ceger.png">';
+    */
+  
+   
+    $src4 = new \Imagick(public_path("site-images/Bibs-Blue-BG.png"));
+  /*  
+     $src4 = new \Imagick(public_path("site-images/1Tote-Bag-Black-handle-BG-Redlined.jpg"));
+  $src4->resizeImage(1500, 1500,\Imagick::FILTER_LANCZOS,1); 
+    $src4->writeImage(public_path("\site-images/Textura-Canvas-mockup.png")); */
+     $src3 = new \Imagick(public_path("image/image-bibs.png"));
+     $src4->compositeImage($src3, \Imagick::COMPOSITE_OVER,0,0);
+     $src4->writeImage(public_path("image\multiply_bibs.png"));
+     echo '<img src="\image\multiply_bibs.png">'; 
+     dd();
+     $src5->compositeImage($src6, \Imagick::COMPOSITE_OVER,0,0);
+     $src5->writeImage(public_path("image\multiply_ceger1.png"));
+  
+   echo '<img src="\image\multiply_ceger1.png">'; 
+  }
+
     public function upload(Request $request){
       
         $file = $request->file('file');
@@ -8693,8 +10919,8 @@ if (!$process9->isSuccessful()) {
         
   
    $src1 = new \Imagick(public_path("design". $imageName1));
-   $src1->resizeImage(400, null,\Imagick::FILTER_LANCZOS,1); 
-   $src1->writeImage(public_path("design". $imageName1));
+    $src1->resizeImage(550, null,\Imagick::FILTER_LANCZOS,1); 
+   $src1->writeImage(public_path("design". $imageName1)); 
   $src2 = new \Imagick(public_path("\image\Iphone-II-Pro-Bezpozadine1.png"));
   $src3 = new \Imagick(public_path("\image\Iphone-II-Pro.jpg"));
   
@@ -8738,7 +10964,7 @@ if (!$process9->isSuccessful()) {
    $process7 = new Process('magick convert ^
    '.$path.'\design'. $imageName1. ' ^
    '.$path.'\image\ms_light_map-phone1.png ^
-   -geometry -340-320 ^
+   -geometry -260-120 ^
    -compose Multiply -composite ^
    '.$path.'\image\ms_logo_displace_mask_phone1.png ^
    -compose CopyOpacity -composite ^
@@ -8755,7 +10981,7 @@ if (!$process9->isSuccessful()) {
   $src1->setImageVirtualPixelMethod(\Imagick::VIRTUALPIXELMETHOD_TRANSPARENT);
   $src1->setImageArtifact('compose:args', "1,0,-0.5,0.5");
   $src = new \Imagick(public_path("\image\ms_light_map_logo_phone1.png"));
-  $src2->compositeImage($src, \Imagick::COMPOSITE_DSTOVER, 340, 320);
+  $src2->compositeImage($src, \Imagick::COMPOSITE_DSTOVER, 260, 120);
   $src2->writeImage(public_path("image/output1.png"));
    $process5 = new Process('magick  convert '.$path.'\image\output1.png -background "rgb(0,0,0)" 
    -flatten  '.$path.'\image\out.png 
@@ -8785,7 +11011,6 @@ if (!$process9->isSuccessful()) {
   '.$path.'\image\ms_light_map-phone1.png ^
   '.$path.'\image\output1.png ^
   -compose ATop -composite ^
-  
   -depth 16 ^
   '.$path.'\image\ms_product_phone1.png
   ');

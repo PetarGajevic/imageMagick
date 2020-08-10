@@ -533,3 +533,24 @@
     <input type="submit" value="Upload" name="submit">
 
 </form>
+
+
+<h2>Custom Case</h2>
+
+<form action="/work/mockup60" method="post" enctype="multipart/form-data">
+    @csrf
+    <label>Select image to upload:</label>
+    <input type="file" name="file" id="file">
+    <input type="submit" value="Upload" name="submit">
+
+</form>
+
+<h2>Kids bibs</h2>
+
+<form action="/work/mockup61" method="post" enctype="multipart/form-data">
+    @csrf
+    <label>Select image to upload:</label>
+    <input type="file" name="file" id="file">
+    <input type="submit" value="Upload" name="submit">
+
+</form>
