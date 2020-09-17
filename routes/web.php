@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/calendar', function () {
+    return view('calendar');
+});
+
 
 /* Route::get('/', 'ImageController@check'); */
 
@@ -143,3 +147,7 @@ Route::post('/work/mockup59', 'ImageController@uploadMockup59');
 Route::post('/work/mockup60', 'ImageController@uploadMockup60');
 
 Route::post('/work/mockup61', 'ImageController@uploadMockup61');
+
+Route::post('/work/mockup62', 'ImageController@uploadMockup62');
+
+Route::post('/work/mockup63', 'ImageController@uploadMockup63');

@@ -1,5 +1,8 @@
 @include('layouts.app')
 
+
+<a href="/calendar">Kalendar</a>
+
 <form action="/work" method="post" enctype="multipart/form-data">
     @csrf
     <label>Select image to upload:</label>
@@ -548,6 +551,26 @@
 <h2>Kids bibs</h2>
 
 <form action="/work/mockup61" method="post" enctype="multipart/form-data">
+    @csrf
+    <label>Select image to upload:</label>
+    <input type="file" name="file" id="file">
+    <input type="submit" value="Upload" name="submit">
+
+</form>
+
+<h2>Kids T-shirts</h2>
+
+<form action="/work/mockup62" method="post" enctype="multipart/form-data">
+    @csrf
+    <label>Select image to upload:</label>
+    <input type="file" name="file" id="file">
+    <input type="submit" value="Upload" name="submit">
+
+</form>
+
+<h2>Backpacks</h2>
+
+<form action="/work/mockup63" method="post" enctype="multipart/form-data">
     @csrf
     <label>Select image to upload:</label>
     <input type="file" name="file" id="file">
